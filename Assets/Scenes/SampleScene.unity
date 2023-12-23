@@ -300,17 +300,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 141400616}
-  groundCheck: {fileID: 1667100811}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
   playerStamina: 0
   maxStamina: 100
   hasRegenerated: 1
   isSprinting: 0
   staminaDrain: 1
   staminaRegen: 0.5
-  runSpeed: 15
+  runSpeed: 7
 --- !u!1 &322968472
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +496,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 119.2
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
