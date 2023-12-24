@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    bool can;
+    bool iscan;
     public GameObject player;
 
     void Update()
     {
-        if(can && Buttons._isOpened == true && Input.GetKeyDown(KeyCode.E))
+        if (Buttons._isOpened == true && Input.GetKeyDown(KeyCode.E) && iscan == true)
         {
             //SceneManager.LoadScene("Lvl2");
             gameObject.SetActive(false);
@@ -21,14 +20,14 @@ public class Door : MonoBehaviour
     {
         if (player.tag == "Player")
         {
-            can = true;
+            iscan = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collder)
     {
         if (player.tag == "Player")
         {
-            can = false;
+            iscan = false;
         }
     }
 }

@@ -10,9 +10,12 @@ public class Buttons : MonoBehaviour
 
     void Update()
     {
-        if(can == true && Input.GetKeyDown(KeyCode.E))
+        if(can == true)
         {
-            _isOpened = true;
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                _isOpened = true;
+            }
         }
         else
         {
