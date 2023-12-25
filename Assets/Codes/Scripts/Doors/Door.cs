@@ -41,7 +41,7 @@ public class Door : MonoBehaviour
     IEnumerator _dust()
     {
         gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
-        yield return new WaitForSeconds(0.71f);
+        yield return new WaitForSeconds(0.74f);
         dust.GetComponent<Animator>().SetTrigger("IsDust");
         Enter();
     }
