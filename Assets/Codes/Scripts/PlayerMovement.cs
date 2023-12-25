@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     public float playerStamina;
-    [SerializeField] private float maxStamina = 100f;
+    [SerializeField] private float maxStamina = 11f;
 
     [HideInInspector] public bool hasRegenerated = true;
     [HideInInspector] public bool isSprinting = false;

@@ -7,15 +7,13 @@ public class Door : MonoBehaviour
 {
     bool iscan;
     public GameObject player;
+    public GameObject dust;
+
     void Update()
     {
         if(Buttons._isOpened == true)
         {
-            if (Input.GetKeyDown(KeyCode.E) && iscan == true)
-            {
-                SceneManager.LoadScene("Lvl2");
-            }
-            gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
+            StartCoroutine(_dust());
         }
     }
 
@@ -32,5 +30,19 @@ public class Door : MonoBehaviour
         {
             iscan = false;
         }
+    }
+    void Enter()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && iscan == true)
+        {
+            SceneManager.LoadScene("Lvl2");
+        }
+    }
+    IEnumerator _dust()
+    {
+        gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
+        yield return new WaitForSeconds(0.71f);
+        dust.GetComponent<Animator>().SetTrigger("IsDust");
+        Enter();
     }
 }
