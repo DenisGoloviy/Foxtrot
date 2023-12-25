@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,31 +6,28 @@ public class Buttons : MonoBehaviour
 {
     public static bool _isOpened;
     public GameObject player;
-    public bool can;
+    public GameObject Door;
+    bool can;
 
+    public ScriptOjectDoor _ScriptOjectDoor;
     void Update()
     {
-        if(can == true)
+        if(can == true && Input.GetKeyDown(KeyCode.E))
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                _isOpened = true;
-            }
-        }
-        else
-        {
-            _isOpened = false;
+            _isOpened = true;
+            gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptOjectDoor._Buttontred[1];
+            Door.GetComponent<SpriteRenderer>().sprite = _ScriptOjectDoor._Lightred[1];
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collder)
+    void OnTriggerEnter2D(Collider2D collder)
     {
         if(player.tag == "Player")
         {
             can = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collder)
+    void OnTriggerExit2D(Collider2D collder)
     {
         if (player.tag == "Player")
         {
