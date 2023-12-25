@@ -9,9 +9,13 @@ public class Door : MonoBehaviour
     public GameObject player;
     void Update()
     {
-        if (Buttons._isOpened == true && Input.GetKeyDown(KeyCode.E) && iscan == true)
+        if(Buttons._isOpened == true)
         {
-            SceneManager.LoadScene("Lvl2");
+            if (Input.GetKeyDown(KeyCode.E) && iscan == true)
+            {
+                SceneManager.LoadScene("Lvl2");
+            }
+            gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
         }
     }
 
