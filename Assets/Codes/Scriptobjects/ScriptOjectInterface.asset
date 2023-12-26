@@ -21,3 +21,27 @@ MonoBehaviour:
   - {fileID: 1047930413, guid: d287448f43a7ceb42ba8eb1d69265904, type: 3}
   - {fileID: 311160349, guid: d287448f43a7ceb42ba8eb1d69265904, type: 3}
   - {fileID: -1328620823, guid: d287448f43a7ceb42ba8eb1d69265904, type: 3}
+  _HpBar:
+  - {fileID: -101611516, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -702881584, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: 1631813117, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: 2133719501, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -1549236121, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -1131881714, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: 1402297727, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -953991474, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -515947804, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: 792720278, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -992500446, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  - {fileID: -436782498, guid: 40827dbbf9f197a44b4c84dc84f5a75c, type: 3}
+  _StaminaBar:
+  - {fileID: -848955795, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1511346377, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1492598226, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: 1050075944, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: 1988077210, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1436261052, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: 1415416353, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1335631570, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1488902095, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
+  - {fileID: -1035259837, guid: 88072699c55373f4282b2a3347ff83b4, type: 3}
