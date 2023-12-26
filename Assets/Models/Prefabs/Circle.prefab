@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 4809111013756328259}
+  gameobject: {fileID: 6150331768124553993}
 --- !u!50 &4809111013756328259
 Rigidbody2D:
   serializedVersion: 4

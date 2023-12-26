@@ -6,9 +6,16 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
+    public float time = 10f;
+    public GameObject gameobject;
 
     void Start()
     {
         rb.velocity = transform.right * speed;
+    }
+
+    private void FixedUpdate()
+    {
+        Destroy(gameobject, time);
     }
 }
