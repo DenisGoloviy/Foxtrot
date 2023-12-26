@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,63 +8,27 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 5f;
-    private float currentSpeed;
     private bool isFacingRight = true;
+    public float jumpForce = 5f;
+    private bool isGrounded = false;
 
     [SerializeField] private Rigidbody2D rb;
-
-    public float playerStamina;
-    [SerializeField] private float maxStamina = 11f;
-
-    [HideInInspector] public bool hasRegenerated = true;
-    [HideInInspector] public bool isSprinting = false;
-
-    [SerializeField] private float staminaDrain = 1f;
-    [SerializeField] private float staminaRegen = 0.5f;
-
-    [SerializeField] private float runSpeed = 15f;
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
         Flip();
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            isSprinting = false;
-        }
-
-        if (isSprinting == true)
-        {
-            if(playerStamina > 0f)
-            {
-                playerStamina -= staminaDrain * Time.deltaTime;
-                currentSpeed = runSpeed;
-            }
-        }
-        if (isSprinting == false)
-        {
-            if (playerStamina < 100f)
-            {
-                playerStamina += staminaRegen * Time.deltaTime;
-                currentSpeed = speed;
-            }
-        }
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
 
@@ -77,10 +42,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        playerStamina = maxStamina;
+        isGrounded = true;
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
 }
 
