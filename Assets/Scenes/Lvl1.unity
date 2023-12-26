@@ -243,8 +243,8 @@ GameObject:
   - component: {fileID: 141400616}
   - component: {fileID: 141400615}
   - component: {fileID: 141400620}
-  - component: {fileID: 141400621}
   - component: {fileID: 141400622}
+  - component: {fileID: 141400623}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -379,8 +379,25 @@ MonoBehaviour:
   staminaDrain: 1
   staminaRegen: 0.5
   runSpeed: 7
---- !u!61 &141400621
-BoxCollider2D:
+--- !u!114 &141400622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141400614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5321784ba01584d87e87ae5415cbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ScriptObjectInterface: {fileID: 11400000, guid: ee086ab86728a2d4bbf1f7fece0e8b8b, type: 2}
+  _E: {fileID: 1185632498}
+  _SPACE: {fileID: 1551588528}
+  _Q: {fileID: 2130877542}
+  _LM: {fileID: 620694880}
+--- !u!70 &141400623
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -411,36 +428,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024367442, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.24}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.06188262, y: 0.24}
-  m_EdgeRadius: 0
---- !u!114 &141400622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141400614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5321784ba01584d87e87ae5415cbb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ScriptObjectInterface: {fileID: 11400000, guid: ee086ab86728a2d4bbf1f7fece0e8b8b, type: 2}
-  _E: {fileID: 1185632498}
-  _SPACE: {fileID: 1551588528}
-  _Q: {fileID: 2130877542}
-  _LM: {fileID: 620694880}
+  m_Offset: {x: 0.025052393, y: 0}
+  m_Size: {x: 0.1032332, y: 0.24}
+  m_Direction: 0
 --- !u!1 &345506827
 GameObject:
   m_ObjectHideFlags: 0
