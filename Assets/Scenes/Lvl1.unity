@@ -393,6 +393,10 @@ MonoBehaviour:
   _SPACE: {fileID: 1551588528}
   _Q: {fileID: 2130877542}
   _LM: {fileID: 620694880}
+  _hp: 11
+  _stamina: 10
+  _HPBAR: {fileID: 543303457}
+  _STAMINABAR: {fileID: 1208091829}
 --- !u!70 &141400623
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
