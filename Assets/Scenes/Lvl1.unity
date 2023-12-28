@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 1114087809}
-  bullet: {fileID: 6150331768124553993, guid: 60d83ccbe2882054cb5e93646c6e902b, type: 3}
+  bullet: {fileID: 6150331768124553993, guid: 126212d9f5be4e345a75226bb03bdabf, type: 3}
 --- !u!1 &345506827
 GameObject:
   m_ObjectHideFlags: 0
@@ -9741,6 +9741,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1357584926}
     m_Modifications:
+    - target: {fileID: 5957461222310789129, guid: 1dc5a1f5d0934d04393bca4d0e983144, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7081826059817747927, guid: 1dc5a1f5d0934d04393bca4d0e983144, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.426758
@@ -9865,6 +9869,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 390284959781081914}
     m_Modifications:
+    - target: {fileID: 4468471554278291391, guid: a330698117bd217449b6e411559c2434, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4676288624591122533, guid: a330698117bd217449b6e411559c2434, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0346916
