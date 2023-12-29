@@ -23,8 +23,18 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            gameObject.GetComponent<Animator>().SetBool("IsJumping", true);
+            _hands.GetComponent<Animator>().SetBool("IsJumpingHand", true);
+            gameObject.GetComponent<Animator>().SetBool("IsWalking", false);
+            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", false);
         }
-        if(horizontal != 0)
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("IsJumping", false);
+            _hands.GetComponent<Animator>().SetBool("IsJumpingHand", false);
+        }
+
+        if (horizontal != 0 && isGrounded == true)
         {
             gameObject.GetComponent<Animator>().SetBool("IsWalking", true);
             _hands.GetComponent<Animator>().SetBool("IsWalkingHand", true);
