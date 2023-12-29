@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 8f;
     private bool isGrounded = false;
     public float playerStamina;
-    private float staminaDrain = 1.5f;
+    private float staminaDrain = 2.5f;
     private float staminaRegen = 0.5f;
     private bool isSprinting = false;
 
