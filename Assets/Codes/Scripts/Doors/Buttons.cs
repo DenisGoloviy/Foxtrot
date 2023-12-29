@@ -10,6 +10,7 @@ public class Buttons : MonoBehaviour
     bool can;
 
     public ScriptOjectDoor _ScriptOjectDoor;
+
     void Update()
     {
         if(can == true && Input.GetKeyDown(KeyCode.E))

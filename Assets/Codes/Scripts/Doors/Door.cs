@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    bool iscan;
+    bool isCan;
     public GameObject player;
     public GameObject dust;
 
@@ -21,19 +21,19 @@ public class Door : MonoBehaviour
     {
         if (player.tag == "Player")
         {
-            iscan = true;
+            isCan = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collder)
     {
         if (player.tag == "Player")
         {
-            iscan = false;
+            isCan = false;
         }
     }
     void Enter()
     {
-        if (Input.GetKeyDown(KeyCode.E) && iscan == true)
+        if (Input.GetKeyDown(KeyCode.E) && isCan == true)
         {
             SceneManager.LoadScene("Lvl2");
         }

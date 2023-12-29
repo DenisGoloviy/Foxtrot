@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
 
+    public GameObject _hands;
+
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -22,7 +24,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
+        if(horizontal != 0)
+        {
+            gameObject.GetComponent<Animator>().SetBool("IsWalking", true);
+            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", true);
+        }
+        else
+        {
+            gameObject.GetComponent<Animator>().SetBool("IsWalking", false);
+            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", false);
+        }
         Flip();
     }
 
