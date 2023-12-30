@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,7 +17,11 @@ public class PlayerMovement : MonoBehaviour
     public float playerStamina;
     private float staminaDrain = 2.5f;
     private float staminaRegen = 0.5f;
+    private float maxStaminaFox1 = 11f;
+    private float maxStaminaFox2 = 13f;
+    private float maxStamina;
     private bool isSprinting = false;
+    private bool fox1Active = true;
 
     [SerializeField] private Rigidbody2D rb;
 
@@ -24,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        playerStamina = 11f;
+        playerStamina = maxStaminaFox1;
+        maxStamina = maxStaminaFox1;
     }
 
     private void Update()
@@ -72,11 +78,13 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!isSprinting)
         {
-            if (playerStamina < 11f)
+            if (playerStamina < maxStamina)
             {
                 playerStamina += staminaRegen * Time.deltaTime;
             }
         }
+
+        Swap();
     }
 
     private void FixedUpdate()
@@ -103,6 +111,29 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+    }
+
+    private void Swap()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && fox1Active)
+        {
+            runSpeed = 10f;
+            walkSpeed = 3.5f;
+            staminaDrain = 1.5f;
+            staminaRegen = 0.8f;
+            maxStamina = maxStaminaFox2;
+            fox1Active = false;
+        }
+        
+        else if (Input.GetKeyDown(KeyCode.Q) && !fox1Active)
+        {
+                runSpeed = 7f;
+                walkSpeed = 5f;
+                staminaDrain = 2.5f;
+                staminaRegen = 0.5f;
+                maxStamina = maxStaminaFox1;
+                fox1Active = true;
+        }
     }
 }
 
