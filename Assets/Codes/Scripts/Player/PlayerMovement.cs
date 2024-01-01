@@ -26,40 +26,43 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     public GameObject _hands;
+    private Animator PlayerAnimator;
+    private Animator HandAnimator;
+    public GameObject _player;
 
     private void Start()
     {
         playerStamina = maxStaminaFox1;
         maxStamina = maxStaminaFox1;
+        PlayerAnimator = gameObject.GetComponent<Animator>();
+        HandAnimator = _hands.GetComponent<Animator>();
     }
 
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            gameObject.GetComponent<Animator>().SetBool("IsJumping", true);
-            _hands.GetComponent<Animator>().SetBool("IsJumpingHand", true);
-            gameObject.GetComponent<Animator>().SetBool("IsWalking", false);
-            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", false);
+            Animate("Jump", true);
+        }
+        else if(!isGrounded)
+        {
+            Animate("Jump", true);
         }
         else
         {
-            gameObject.GetComponent<Animator>().SetBool("IsJumping", false);
-            _hands.GetComponent<Animator>().SetBool("IsJumpingHand", false);
+            Animate("Jump", false);
         }
 
         if (horizontal != 0 && isGrounded == true)
         {
-            gameObject.GetComponent<Animator>().SetBool("IsWalking", true);
-            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", true);
+            Animate("Walk", true);
         }
         else
         {
-            gameObject.GetComponent<Animator>().SetBool("IsWalking", false);
-            _hands.GetComponent<Animator>().SetBool("IsWalkingHand", false);
+            Animate("Walk", false);
         }
 
         Flip();
@@ -87,6 +90,11 @@ public class PlayerMovement : MonoBehaviour
         Swap();
     }
 
+    private void Animate(string movementType, bool value)
+    {
+        PlayerAnimator.SetBool($"Is{movementType}ing", value);
+        HandAnimator.SetBool($"Is{movementType}ingHand", value);
+    }
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
@@ -123,8 +131,9 @@ public class PlayerMovement : MonoBehaviour
             staminaRegen = 0.8f;
             maxStamina = maxStaminaFox2;
             fox1Active = false;
+            //_player.GetComponent<SpriteRenderer>().sprite = ;
         }
-        
+
         else if (Input.GetKeyDown(KeyCode.Q) && !fox1Active)
         {
                 runSpeed = 7f;
