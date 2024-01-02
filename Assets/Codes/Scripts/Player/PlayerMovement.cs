@@ -42,23 +42,25 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-
+        
         if (isGrounded && Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             Animate("Jump", true);
-            
         }
         else if (!fox1Active && doubleJump)
         {
             if (Input.GetButtonDown("Jump"))
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-
                 doubleJump = !doubleJump;
             }
         }
-        else if(!isGrounded)
+        else
+        {
+            Animate("Jump", false);
+        }
+        if (!isGrounded)
         {
             Animate("Jump", true);
         }
