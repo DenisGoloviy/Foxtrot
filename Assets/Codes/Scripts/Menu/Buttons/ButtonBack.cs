@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonSetting : MonoBehaviour
+public class ButtonBack : MonoBehaviour
 {
     public ScriptObjectButtons _ScriptObjectButtons;
 
@@ -11,16 +11,16 @@ public class ButtonSetting : MonoBehaviour
 
     void OnMouseEnter()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonOptions[0];
+        gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonLeave[0];
     }
     void OnMouseExit()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonOptions[1];
+        gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonLeave[1];
     }
     void OnMouseUpAsButton()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonOptions[2];
-        MainMenu.SetActive(false);
-        Settings.SetActive(true);
+        MainMenu.SetActive(true);
+        Settings.SetActive(false);
     }
 }
