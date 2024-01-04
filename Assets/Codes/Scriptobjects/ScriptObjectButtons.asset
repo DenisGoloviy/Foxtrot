@@ -17,13 +17,17 @@ MonoBehaviour:
   - {fileID: 1310596069, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: -694649772, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   _ButtonOptions:
-  - {fileID: -540558866, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
-  - {fileID: 1820621254, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
-  - {fileID: -338450249, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: 63933999, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: -1880992041, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: -1267468139, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   _ButtonHelp:
   - {fileID: 433464894, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: 1161799486, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: -1584971606, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  _ButtonInterfaceHelp:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _ButtonLeave:
   - {fileID: 807662334, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: 353140318, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
