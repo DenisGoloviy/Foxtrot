@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Animate("Jump", false);
         }
+
         if (!isGrounded)
         {
             Animate("Jump", true);
@@ -147,7 +148,6 @@ public class PlayerMovement : MonoBehaviour
             staminaRegen = 0.8f;
             maxStamina = maxStaminaFox2;
             fox1Active = false;
-            //_player.GetComponent<SpriteRenderer>().sprite = ;
         }
 
         else if (Input.GetKeyDown(KeyCode.Q) && !fox1Active)
@@ -158,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
                 staminaRegen = 0.5f;
                 maxStamina = maxStaminaFox1;
                 fox1Active = true;
+
         }
     }
 }
