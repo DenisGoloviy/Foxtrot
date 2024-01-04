@@ -20,7 +20,7 @@ public class ButtonSetting : MonoBehaviour
     void OnMouseUpAsButton()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = _ScriptObjectButtons._buttonOptions[2];
-        MainMenu.SetActive(false);
-        Settings.SetActive(true);
+        //MainMenu.SetActive(false);
+        //Settings.SetActive(true);
     }
 }
