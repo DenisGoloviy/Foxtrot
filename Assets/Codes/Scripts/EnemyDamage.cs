@@ -6,15 +6,6 @@ public class EnemyDamage : MonoBehaviour
 {
     public HealthSystem healthSystem;
     public int damage = 2;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

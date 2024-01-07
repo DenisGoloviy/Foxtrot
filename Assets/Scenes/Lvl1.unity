@@ -1646,6 +1646,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2012174775175013835, guid: b94257997f8b1184c98cec79c2c07240, type: 3}
   m_PrefabInstance: {fileID: 1602072286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1118554356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6288279185995037969, guid: ea477b2df4e3004448604f2b002de58f, type: 3}
+  m_PrefabInstance: {fileID: 4678359073815464346}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569a34b1f01b20547937ad831d25f6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1140640111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9120,6 +9131,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1542269895532737601, guid: a32074f29d93e3c4893cc6662c1b5b76, type: 3}
+      propertyPath: Scene
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1542269895532737601, guid: a32074f29d93e3c4893cc6662c1b5b76, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1118554356}
     - target: {fileID: 1542269895532737601, guid: a32074f29d93e3c4893cc6662c1b5b76, type: 3}
       propertyPath: player
       value: 

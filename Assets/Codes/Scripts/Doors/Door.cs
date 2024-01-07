@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     bool isCan;
-    public GameObject player;
     public GameObject dust;
+    public Buttons button;
+
+    public int Scene;
 
     void Update()
     {
-        if(Buttons._isOpened == true)
+        if(button._isOpened == true)
         {
             StartCoroutine(_dust());
         }
@@ -19,23 +21,26 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collder)
     {
-        if (player.tag == "Player")
+        Debug.Log("OnTriggerEnter2D");
+        if (collder.gameObject.tag == "Player")
         {
             isCan = true;
+            Debug.Log("Player");
         }
     }
     private void OnTriggerExit2D(Collider2D collder)
     {
-        if (player.tag == "Player")
+        if (collder.gameObject.tag == "Player")
         {
             isCan = false;
         }
     }
     void Enter()
     {
+        Debug.Log(isCan);
         if (Input.GetKeyDown(KeyCode.E) && isCan == true)
         {
-            SceneManager.LoadScene("Lvl2");
+            SceneManager.LoadScene(Scene);
         }
     }
     IEnumerator _dust()

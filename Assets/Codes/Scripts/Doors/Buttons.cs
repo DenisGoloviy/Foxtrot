@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
-    public static bool _isOpened;
+    public bool _isOpened;
     public GameObject player;
     public GameObject Door;
     bool can;
