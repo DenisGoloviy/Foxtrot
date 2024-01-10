@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     private bool isChasing;
     public float chaseDistance;
 
+    public int enemyHP = 10;
+    public Shooting shooting;
+
     void Update()
     {
         if (isChasing)
@@ -55,6 +58,19 @@ public class Enemy : MonoBehaviour
                     transform.localScale = new Vector3(-8, 8, 8);
                     patrolDestination = 0;
                 }
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            enemyHP -= shooting.damage;
+            if (enemyHP <= 0)
+            {
+                Destroy(gameObject);
             }
         }
     }
