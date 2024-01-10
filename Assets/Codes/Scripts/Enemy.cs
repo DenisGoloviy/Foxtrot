@@ -26,6 +26,10 @@ public class Enemy : MonoBehaviour
                 transform.localScale = new Vector3(8, 8, 8);
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
             }
+            if (Vector2.Distance(transform.position, playerPosition.position) > chaseDistance)
+            {
+                isChasing = false;
+            }
         }
         else
         {
