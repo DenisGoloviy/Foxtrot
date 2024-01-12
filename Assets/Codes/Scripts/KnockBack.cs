@@ -4,23 +4,36 @@ using UnityEngine;
 
 public class KnockBack : MonoBehaviour
 {
-    public PlayerMovement playerMovement;
-    public Transform playerPosition;
-    public Transform enemyPosition;
-    public float KBForce = 15f;
+    [SerializeField] float knockBackLength = 1.5f;
+    [SerializeField] float knockBackForce = 30f;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    PlayerMovement playerMovement;
+    Rigidbody2D rb;
+
+    public bool IsHurt
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            if(playerPosition.position.x <= enemyPosition.position.x)
-            {
-                playerMovement.rb.velocity = new Vector2(KBForce, KBForce);
-            }
-            if (playerPosition.position.x >= enemyPosition.position.x)
-            {
-                playerMovement.rb.velocity = new Vector2(-KBForce, KBForce);
-            }
-        }
+        get { return isHurt; }
+    }
+
+    bool isHurt = false;
+
+    void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
+    }
+    public void DoKnockBack()
+    {
+        StartCoroutine(DisablePlayerMovement(knockBackLength));
+        rb.velocity = new Vector2(-playerMovement.FacingDirection * knockBackForce, knockBackForce);
+    }
+
+    IEnumerator DisablePlayerMovement(float time)
+    {
+        playerMovement.canMove = false;
+        isHurt = true;
+        yield return new WaitForSeconds(time);
+        playerMovement.canMove = true;
+        isHurt = false;
     }
 }

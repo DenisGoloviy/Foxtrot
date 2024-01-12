@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject enemy;
     private float horizontal;
     private float walkSpeed = 5f;
     private float runSpeed = 7f;
@@ -23,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isSprinting = false;
     private bool fox1Active = true;
     private bool doubleJump = true;
+    public bool canMove = true;
+    [HideInInspector]
+    float facingDirection = 1;
 
     [SerializeField] public Rigidbody2D rb;
 
@@ -30,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator PlayerAnimator;
     private Animator HandAnimator;
     public GameObject _player;
+
+    public float FacingDirection
+    {
+        get { return facingDirection; }
+    }
 
     private void Start()
     {
@@ -113,7 +122,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+        if (canMove)
+            rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
     }
 
 
@@ -121,6 +131,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
+            facingDirection *= -1;
+
             isFacingRight = !isFacingRight;
 
             transform.Rotate(0f, 180f, 0f);

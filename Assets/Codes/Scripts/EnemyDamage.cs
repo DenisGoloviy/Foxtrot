@@ -12,6 +12,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             healthSystem.TakeDamage(damage);
+            collision.gameObject.GetComponent<KnockBack>().DoKnockBack();
         }
     }
 }

@@ -9,6 +9,8 @@ public class Turret : MonoBehaviour
     public GameObject bullet;
     public float cooldownTime = 1.5f;
     public Transform shootingPoint;
+    private int enemyHP = 10;
+    public Shooting shooting;
 
     private void Start()
     {
@@ -17,5 +19,18 @@ public class Turret : MonoBehaviour
     void SpawnBullet()
     {
         Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            enemyHP -= shooting.damage;
+            if (enemyHP <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
