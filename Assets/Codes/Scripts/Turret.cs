@@ -10,15 +10,12 @@ public class Turret : MonoBehaviour
     public float cooldownTime = 1.5f;
     public Transform shootingPoint;
 
-    private void Update()
+    private void Start()
     {
-        cooldownTime -= 1 * Time.deltaTime;
-
-        if (cooldownTime <= 0f)
-        {
-            Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
-
-            cooldownTime = 1.5f;
-        }
+        InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
+    }
+    void SpawnBullet()
+    {
+        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
     }
 }
