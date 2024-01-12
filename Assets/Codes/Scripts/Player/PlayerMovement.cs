@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private bool fox1Active = true;
     private bool doubleJump = true;
 
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
 
     public GameObject _hands;
     private Animator PlayerAnimator;
