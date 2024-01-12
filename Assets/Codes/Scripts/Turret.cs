@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     public GameObject bullet;
     public float cooldownTime = 1.5f;
     public Transform shootingPoint;
-    private int enemyHP = 10;
+    public int enemyHP = 10;
     public Shooting shooting;
 
     private void Start()

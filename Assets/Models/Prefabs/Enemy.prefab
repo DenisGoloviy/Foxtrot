@@ -226,6 +226,8 @@ MonoBehaviour:
   patrolDestination: 0
   playerPosition: {fileID: 0}
   chaseDistance: 3
+  enemyHP: 10
+  shooting: {fileID: 6811041389855010762, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
 --- !u!50 &6025824085989120481
 Rigidbody2D:
   serializedVersion: 4

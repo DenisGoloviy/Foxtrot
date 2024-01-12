@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public int damage = 2;
     public Enemy enemy;
+    public Turret turret;
 
     void Update()
     {
@@ -29,6 +30,15 @@ public class Shooting : MonoBehaviour
             Destroy(bullet);
             enemy.enemyHP -= damage;
             if (enemy.enemyHP <= 0)
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+        if (collision.tag == "Turret")
+        {
+            Destroy(bullet);
+            turret.enemyHP -= damage;
+            if (turret.enemyHP <= 0)
             {
                 Destroy(collision.gameObject);
             }

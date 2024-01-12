@@ -134,9 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb3e6f6a59c164e4294033871485c401, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   rb: {fileID: 4809111013756328259}
-  time: 10
+  time: 20
   gameobject: {fileID: 6150331768124553993}
 --- !u!50 &4809111013756328259
 Rigidbody2D:
