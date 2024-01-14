@@ -15,6 +15,12 @@ public class Enemy : MonoBehaviour
     public int enemyHP = 10;
     public Shooting shooting;
 
+    private Animator EnemyAnimator;
+
+    void Start()
+    {
+        EnemyAnimator = GetComponent<Animator>();
+    }
     void Update()
     {
         if (isChasing)
@@ -70,8 +76,14 @@ public class Enemy : MonoBehaviour
             enemyHP -= shooting.damage;
             if (enemyHP <= 0)
             {
-                Destroy(gameObject);
+                StartCoroutine(Destroy());
             }
         }
+    }
+    IEnumerator Destroy()
+    {
+        EnemyAnimator.SetTrigger("Destroy");
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 }
