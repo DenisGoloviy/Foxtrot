@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator PlayerAnimator;
     private Animator HandAnimator;
     public GameObject _player;
-
+    public Sprite ShootingHands;
     public float FacingDirection
     {
         get { return facingDirection; }

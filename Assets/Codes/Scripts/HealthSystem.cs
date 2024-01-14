@@ -6,17 +6,25 @@ public class HealthSystem : MonoBehaviour
 {
     public int health;
     public int maxHealth = 10;
+
+    private Animator _Body;
+    public GameObject _Hand;
+
+    public Interface _Interface;
     void Start()
     {
         health = maxHealth;
+        _Body = GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+        _Interface._hp -= damage;
         if (health <= 0)
-        { 
-            Destroy(gameObject);
+        {
+            _Body.SetTrigger("Death");
+            Destroy(_Hand);
         }
     }
 }

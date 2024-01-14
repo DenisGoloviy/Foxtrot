@@ -28,9 +28,9 @@ public class Interface : MonoBehaviour
 
     void _Bars()
     {
-        if(_hp > 11)
+        if(_hp > 10)
         {
-            _hp = 11;
+            _hp = 10;
         }
         else if(_hp < 0) 
         {
@@ -47,106 +47,20 @@ public class Interface : MonoBehaviour
         }
 
         ///////HP:
-        if (_hp == 11) 
+        if (_hp == 10) 
         {
             _HPBAR.sprite = _ScriptObjectInterface._hpbar[0];
         }
-        else if(_hp == 10) 
+        else 
         {
             _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("10");
+            _HPBAR.GetComponent<Animator>().Play(_hp.ToString());
         }
-        else if (_hp == 9)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("9");
-        }
-        else if (_hp == 8)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("8");
-        }
-        else if (_hp == 7)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("7");
-        }
-        else if (_hp == 6)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("6");
-        }
-        else if (_hp == 5)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("5");
-        }
-        else if (_hp == 4)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("4");
-        }
-        else if (_hp == 3)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("3");
-        }
-        else if (_hp == 2)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("2");
-        }
-        else if (_hp == 1)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("1");
-        }
-        else if (_hp == 0)
-        {
-            _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play("0");
-        }
+
         ///////Stamina:
-        if (_stamina == 9)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[9];
-        }
-        else if (_stamina == 8)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[8];
-        }
-        else if (_stamina == 7)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[7];
-        }
-        else if (_stamina == 6)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[6];
-        }
-        else if (_stamina == 5)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[5];
-        }
-        else if (_stamina == 4)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[4];
-        }
-        else if (_stamina == 3)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[3];
-        }
-        else if (_stamina == 2)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[2];
-        }
-        else if (_stamina == 1)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[1];
-        }
-        else if (_stamina == 0)
-        {
-            _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[0];
-        }
+        _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[_stamina];
+
+
     }
     void _Help()
     {
