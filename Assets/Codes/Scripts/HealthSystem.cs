@@ -8,7 +8,6 @@ public class HealthSystem : MonoBehaviour
     public int maxHealth = 10;
 
     private Animator _Body;
-    public GameObject _Hand;
 
     public Interface _Interface;
     void Start()
@@ -24,7 +23,6 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0)
         {
             _Body.SetTrigger("Death");
-            Destroy(_Hand);
         }
     }
 }
