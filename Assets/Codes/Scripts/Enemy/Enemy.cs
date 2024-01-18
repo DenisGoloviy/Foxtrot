@@ -27,12 +27,12 @@ public class Enemy : MonoBehaviour
         {
             if (transform.position.x > playerPosition.position.x)
             {
-                transform.localScale = new Vector3(-8, 8, 8);
+                transform.localScale = new Vector3(8, 8, 8);
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
             }
             if (transform.position.x < playerPosition.position.x)
             {
-                transform.localScale = new Vector3(8, 8, 8);
+                transform.localScale = new Vector3(-8, 8, 8);
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
             }
             if (Vector2.Distance(transform.position, playerPosition.position) > chaseDistance)
