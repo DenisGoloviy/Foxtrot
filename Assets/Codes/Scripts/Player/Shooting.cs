@@ -9,10 +9,11 @@ public class Shooting : MonoBehaviour
     public int damage = 2;
     public Enemy enemy;
     public Turret turret;
+    public PlayerMovement playerMovement;
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && playerMovement.fox1Active)
         {
             Shoot();
         }

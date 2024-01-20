@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private float maxStaminaFox2 = 13f;
     private float maxStamina;
     private bool isSprinting = false;
-    private bool fox1Active = true;
+    public bool fox1Active = true;
     private bool doubleJump = true;
     public bool canMove = true;
     [HideInInspector]
