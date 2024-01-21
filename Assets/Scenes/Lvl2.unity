@@ -1919,6 +1919,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.0077491873
       objectReference: {fileID: 0}
+    - target: {fileID: 1975013065168789177, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
       propertyPath: shooting
       value: 
@@ -12262,8 +12266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81ac4417e90b4545ac92817ec7be0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSystem: {fileID: 1770981894}
-  damage: 2
+  damage: 1
 --- !u!61 &1839379933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30739,9 +30742,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1942692478750689170, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942692478750689170, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942692478750689170, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1334881298, guid: 73a1696ec57470b4da673a3a54a2ab58, type: 3}
+      objectReference: {fileID: -12735940, guid: 73a1696ec57470b4da673a3a54a2ab58, type: 3}
+    - target: {fileID: 1942692478750689170, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7133818427995656053, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
       propertyPath: shooting
       value: 

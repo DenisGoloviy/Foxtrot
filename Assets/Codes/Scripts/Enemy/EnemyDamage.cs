@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public HealthSystem healthSystem;
-    public int damage = 2;
+    public int damage = 1;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        GameObject collidedObject = collision.gameObject;
+        if (collidedObject.tag == "Player")
         {
-            healthSystem.TakeDamage(damage);
-            collision.gameObject.GetComponent<KnockBack>().DoKnockBack();
+            collidedObject.GetComponent<HealthSystem>().TakeDamage(damage);
+            print(damage);
+            collidedObject.GetComponent<KnockBack>().DoKnockBack();
         }
     }
 }
