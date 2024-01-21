@@ -9,7 +9,7 @@ public class DeathZone : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            healthSystem.health -= healthSystem.health;
+            healthSystem.TakeDamage(10);
         }
     }
 }
