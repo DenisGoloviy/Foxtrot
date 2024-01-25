@@ -15,13 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     public float jumpForce = 8f;
     private bool isGrounded = false;
-    public float playerStamina;
-    private float staminaDrain = 2.5f;
-    private float staminaRegen = 0.5f;
-    private float maxStaminaFox1 = 11f;
-    private float maxStaminaFox2 = 13f;
-    private float maxStamina;
-    private bool isSprinting = false;
     public bool fox1Active = true;
     private bool doubleJump = true;
     public bool canMove = true;
@@ -42,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        playerStamina = maxStaminaFox1;
-        maxStamina = maxStaminaFox1;
         PlayerAnimator = gameObject.GetComponent<Animator>();
         HandAnimator = _hands.GetComponent<Animator>();
     }
@@ -90,28 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
         Flip();
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (playerStamina > 0f)
-            {
-                currentSpeed = runSpeed; isSprinting = true;
-                playerStamina -= staminaDrain * Time.deltaTime;
-            }
-        }
-        else
-        {
-            currentSpeed = walkSpeed; isSprinting = false;
-        }
-        if (!isSprinting)
-        {
-            if (playerStamina < maxStamina)
-            {
-                playerStamina += staminaRegen * Time.deltaTime;
-            }
-        }
-
-        
-
         Swap();
     }
 
@@ -154,21 +123,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && fox1Active)
         {
-            runSpeed = 10f;
-            walkSpeed = 3.5f;
-            staminaDrain = 1.5f;
-            staminaRegen = 0.8f;
-            maxStamina = maxStaminaFox2;
+            walkSpeed = 4.5f;
             fox1Active = false;
         }
 
         else if (Input.GetKeyDown(KeyCode.Q) && !fox1Active)
         {
-                runSpeed = 7f;
-                walkSpeed = 5f;
-                staminaDrain = 2.5f;
-                staminaRegen = 0.5f;
-                maxStamina = maxStaminaFox1;
+                walkSpeed = 3f;
                 fox1Active = true;
 
         }
