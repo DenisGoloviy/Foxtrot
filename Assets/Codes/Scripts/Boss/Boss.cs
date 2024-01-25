@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,13 +8,13 @@ public class Boss : MonoBehaviour
 {
     public TriggerBoss _trigger;
     
-    public GameObject _camera;
+    public CinemachineVirtualCamera _camera;
 
     private void Update()
     {
-        if(_trigger)
+        if(!_trigger)
         {
-            _camera.gameObject.GetComponent<Size>();
+            _camera.m_Lens.OrthographicSize = 10.88f;
         }
     }
 }

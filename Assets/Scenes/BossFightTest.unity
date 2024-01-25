@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc343b4374b551247b0db9490de1b5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRotarionPoint: {fileID: 1708734987}
-  player: {fileID: 1031752969}
+  bullet: {fileID: 1759927606635822483, guid: 0bf8143f80482ce4d89c48e745b5adc9, type: 3}
+  shootingPoint: {fileID: 1708734987}
 --- !u!212 &54665574
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -623,11 +623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519043d7e5a48a74a9b66bbb51f66524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1031752969 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6693463926215988910, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
-  m_PrefabInstance: {fileID: 1089040854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1089040854
 PrefabInstance:
   m_ObjectHideFlags: 0

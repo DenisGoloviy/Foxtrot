@@ -3485,7 +3485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trigger: {fileID: 192578740}
-  _camera: {fileID: 0}
+  _camera: {fileID: 1412132650}
 --- !u!1001 &627598349
 PrefabInstance:
   m_ObjectHideFlags: 0
