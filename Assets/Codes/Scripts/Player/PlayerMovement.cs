@@ -10,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject enemy;
     private float horizontal;
     private float walkSpeed = 5f;
-    private float runSpeed = 7f;
-    private float currentSpeed;
     private bool isFacingRight = true;
     public float jumpForce = 8f;
     private bool isGrounded = false;
@@ -92,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (canMove)
-            rb.velocity = new Vector2(horizontal * currentSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(horizontal * walkSpeed, rb.velocity.y);
     }
 
 
