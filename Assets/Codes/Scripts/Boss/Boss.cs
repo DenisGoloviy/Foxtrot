@@ -6,18 +6,27 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    public TurretBoss _turretboss;
+    public TurretBoss[] _turretboss;
     public TriggerBoss _trigger;
+
+    public Animator BossAnimator;
     
     public CinemachineVirtualCamera _camera;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(!_trigger)
         {
-            _camera.m_Lens.OrthographicSize = 10.88f;
-            _turretboss.TurretMove();
+            _camera.m_Lens.OrthographicSize = 6.88f;
+            FirstPhase();
         }
+    }
+
+    private void FirstPhase()
+    {
+        BossAnimator.SetTrigger("FirstPhase");
+        _turretboss[0].TurretMove();
+        _turretboss[1].TurretMove();
     }
 
 }

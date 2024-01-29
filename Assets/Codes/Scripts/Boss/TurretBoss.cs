@@ -5,22 +5,20 @@ using UnityEngine;
 public class TurretBoss : MonoBehaviour
 {
     public float speed = 3;
-    public Transform[] points;
-    public int i;
+    public float UpAndDownEdge;
 
     public void TurretMove()
     {
-        transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, points[i].position) < 0.2f)
+        Vector3 pos = transform.position;
+        pos.y += speed * Time.deltaTime;
+        transform.position = pos;
+        if (pos.y < -UpAndDownEdge)
         {
-            if (i > 0)
-            {
-                i = 0;
-            }
-            else
-            {
-                i = 0;
-            }
+            speed = Mathf.Abs(speed);
+        }
+        else if (pos.y > UpAndDownEdge)
+        {
+            speed = -Mathf.Abs(speed);
         }
     }
 }
