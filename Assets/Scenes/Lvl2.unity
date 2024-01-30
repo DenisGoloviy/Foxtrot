@@ -1973,6 +1973,10 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 1059486560}
+    - target: {fileID: 5805145867762407235, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5946176034169115897, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.218
@@ -30257,6 +30261,10 @@ PrefabInstance:
     - target: {fileID: 7753587622156599834, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753587622156599834, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

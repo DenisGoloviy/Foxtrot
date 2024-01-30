@@ -19,7 +19,6 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        _Interface._hp -= damage;
         if (health <= 0)
         {
             _Body.SetTrigger("Death");

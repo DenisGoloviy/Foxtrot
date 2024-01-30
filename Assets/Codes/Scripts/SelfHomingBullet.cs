@@ -7,8 +7,6 @@ public class SelfHomingBullet : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public int damage = 2;
-    public HealthSystem healthSystem;
-    public KnockBack knockBack;
 
     public float bulletSpeed = 15f;
 
@@ -23,10 +21,14 @@ public class SelfHomingBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            healthSystem.TakeDamage(damage);
-            knockBack.DoKnockBack();
+            collision.gameObject.GetComponent<HealthSystem>().TakeDamage(damage);
+            collision.gameObject.GetComponent<KnockBack>().DoKnockBack();
+            Destroy(gameObject);
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }
