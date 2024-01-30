@@ -11,7 +11,6 @@ public class ScriptObjectInterface : ScriptableObject
 
     [Header("Bars:")]
     [SerializeField] Sprite[] _HpBar;
-    [SerializeField] Sprite[] _StaminaBar;
 
     public Sprite[] _help
     {
@@ -25,13 +24,6 @@ public class ScriptObjectInterface : ScriptableObject
         get
         {
             return _HpBar;
-        }
-    }
-    public Sprite[] _staminabar
-    {
-        get
-        {
-            return _StaminaBar;
         }
     }
 }

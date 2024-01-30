@@ -16,9 +16,7 @@ public class Interface : MonoBehaviour
 
     [Header("Bars:")]
     public int _hp = 11;
-    public int _stamina = 9;
     public Image _HPBAR;
-    public Image _STAMINABAR;
 
     void Update()
     {
@@ -37,15 +35,6 @@ public class Interface : MonoBehaviour
             _hp = 0;
         }
 
-        if(_stamina > 9) 
-        {
-            _stamina = 9;
-        }
-        else if(_stamina < 0)
-        {
-            _stamina = 0;
-        }
-
         ///////HP:
         if (_hp == 10) 
         {
@@ -58,7 +47,6 @@ public class Interface : MonoBehaviour
         }
 
         ///////Stamina:
-        _STAMINABAR.sprite = _ScriptObjectInterface._staminabar[_stamina];
 
 
     }
