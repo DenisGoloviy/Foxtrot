@@ -5,6 +5,9 @@ using UnityEngine;
 public class TriggerBoss : MonoBehaviour
 {
     bool Trigger;
+
+    public GameObject DoorTrigger;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -12,6 +15,7 @@ public class TriggerBoss : MonoBehaviour
             Trigger = true;
             Debug.Log("Boss");
             Destroy(gameObject);
+            DoorTrigger.SetActive(true);
         }
     }
 }
