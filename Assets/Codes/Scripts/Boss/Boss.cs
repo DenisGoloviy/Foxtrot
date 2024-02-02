@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Boss : MonoBehaviour
 {
@@ -14,22 +15,47 @@ public class Boss : MonoBehaviour
     public Transform _CameraTrigger;
 
     public CinemachineVirtualCamera _camera;
+    BossPhase Phases;
 
     private void Update()
     {
         if(!_trigger)
         {
+            Phases = BossPhase.First_Phase;
             _camera.m_Follow = _CameraTrigger;
             _camera.m_Lens.OrthographicSize = 6.88f;
-            FirstPhase();
+            switch(Phases)
+            {
+                case BossPhase.First_Phase:
+                    FirstPhase();
+                    break;
+                //case BossPhase.Second_Phase:
+                //    SecondPhase();
+                //    break;
+                //case BossPhase.Third_Phase:
+                //    ThirdPhase();
+                //    break;
+            }
         }
     }
 
-    private void FirstPhase()
+    private  void FirstPhase()
     {
-        BossAnimator.SetTrigger("FirstPhase");
-        _turretboss[0].TurretMove();
-        _turretboss[1].TurretMove();
+        if(Phases == BossPhase.First_Phase)
+        {
+            BossAnimator.SetTrigger("FirstPhase");
+            foreach (var turret in _turretboss)
+            {
+                turret?.TurretMove();
+            }
+        }
+    }
+
+    enum BossPhase
+    {
+        First_Phase,
+        Second_Phase,
+        Third_Phase
     }
 
 }

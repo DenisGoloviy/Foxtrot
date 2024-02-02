@@ -46,8 +46,6 @@ public class Interface : MonoBehaviour
             _HPBAR.GetComponent<Animator>().Play(_hp.ToString());
         }
 
-        ///////Stamina:
-
 
     }
     void _Help()
