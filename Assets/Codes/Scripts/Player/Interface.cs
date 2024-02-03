@@ -15,8 +15,9 @@ public class Interface : MonoBehaviour
     public Image _LM;
 
     [Header("Bars:")]
-    public int _hp = 11;
     public Image _HPBAR;
+
+    public HealthSystem health;
 
     void Update()
     {
@@ -26,24 +27,24 @@ public class Interface : MonoBehaviour
 
     void _Bars()
     {
-        if(_hp > 10)
+        if(health.health > 10)
         {
-            _hp = 10;
+            health.health = 10;
         }
-        else if(_hp < 0) 
+        else if(health.health < 0) 
         {
-            _hp = 0;
+            health.health = 0;
         }
 
         ///////HP:
-        if (_hp == 10) 
+        if (health.health == 10) 
         {
             _HPBAR.sprite = _ScriptObjectInterface._hpbar[0];
         }
         else 
         {
             _HPBAR.GetComponent<Animator>().enabled = true;
-            _HPBAR.GetComponent<Animator>().Play(_hp.ToString());
+            _HPBAR.GetComponent<Animator>().Play(health.health.ToString());
         }
 
 

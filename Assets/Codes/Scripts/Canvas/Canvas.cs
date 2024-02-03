@@ -9,14 +9,16 @@ public class Canvas : MonoBehaviour
 
     public Interface _Interface;
 
+    public HealthSystem health;
+
     private void Update()
     {
-        if(_Interface._hp == 0)
+        if(health.health <= 0)
         {
             Interface.SetActive(false);
             Death.SetActive(true);
         }
-        else if(_Interface._hp > 0)
+        else
         {
             Interface.SetActive(true);
             Death.SetActive(false);
