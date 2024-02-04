@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerBoss : MonoBehaviour
 {
-    bool Trigger;
+    public bool Trigger = false;
 
     public GameObject DoorTrigger;
 
