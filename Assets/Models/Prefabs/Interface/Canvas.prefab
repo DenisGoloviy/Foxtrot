@@ -379,6 +379,7 @@ MonoBehaviour:
   Interface: {fileID: 5121249146704424166}
   Death: {fileID: 7065568644259485816}
   _Interface: {fileID: 2025134142384929708}
+  health: {fileID: 0}
 --- !u!1 &7542318604255018834
 GameObject:
   m_ObjectHideFlags: 0

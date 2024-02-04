@@ -15,13 +15,23 @@ public class TurretBoss : MonoBehaviour
     public Shooting shooting;
     TriggerBoss trigger;
 
+    public bool canMove = false;
+
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
+        //InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
     }
     void SpawnBullet()
     {
             Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+    }
+
+    private void Update()
+    {
+        if(canMove)
+        {
+            TurretMove();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

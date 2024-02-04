@@ -8,6 +8,8 @@ public class TriggerBoss : MonoBehaviour
 
     public GameObject DoorTrigger;
 
+    public Boss boss;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -16,6 +18,7 @@ public class TriggerBoss : MonoBehaviour
             Debug.Log("Boss");
             Destroy(gameObject);
             DoorTrigger.SetActive(true);
+            boss.StartPhase();
         }
     }
 }
