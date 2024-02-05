@@ -15,5 +15,9 @@ public class TurretDamage : MonoBehaviour
             collidedObject.GetComponent<KnockBack>().DoKnockBack();
             Destroy(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

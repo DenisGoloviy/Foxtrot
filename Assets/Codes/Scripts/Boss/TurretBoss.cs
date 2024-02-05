@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurretBoss : MonoBehaviour
 {
+    ShootingTrigger shootingTrigger;
     public float speed = 3;
     public float UpAndDownEdge;
     public HealthSystem healthSystem;
@@ -13,25 +14,22 @@ public class TurretBoss : MonoBehaviour
     public Transform shootingPoint;
     public int turretHP = 30;
     public Shooting shooting;
-    TriggerBoss trigger;
-
     public bool canMove = false;
-
-    private void Start()
-    {
-        //InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
-    }
-    void SpawnBullet()
-    {
-            Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
-    }
 
     private void Update()
     {
-        if(canMove)
-        {
             TurretMove();
+
+        if (shootingTrigger.shootingTrigger)
+        {
+            if (cooldownTime <= 0)
+            {
+                SpawnBullet();
+                cooldownTime = 2f;
+            }
         }
+
+        cooldownTime -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,9 +51,13 @@ public class TurretBoss : MonoBehaviour
         if (collidedObject.tag == "Player")
         {
             collidedObject.GetComponent<HealthSystem>().TakeDamage(damage);
-            print(damage);
             collidedObject.GetComponent<KnockBack>().DoKnockBack();
         }
+    }
+
+    void SpawnBullet()
+    {
+        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
     }
 
     public void TurretMove()

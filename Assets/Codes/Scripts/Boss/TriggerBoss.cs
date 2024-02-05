@@ -10,6 +10,8 @@ public class TriggerBoss : MonoBehaviour
 
     public Boss boss;
 
+    TurretBoss turret;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -19,6 +21,7 @@ public class TriggerBoss : MonoBehaviour
             Destroy(gameObject);
             DoorTrigger.SetActive(true);
             boss.StartPhase();
+            turret.canMove = true;
         }
     }
 }
