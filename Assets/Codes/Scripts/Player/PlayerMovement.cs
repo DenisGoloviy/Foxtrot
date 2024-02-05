@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject enemy;
     private float horizontal;
     private float walkSpeed = 5f;
     private bool isFacingRight = true;
@@ -25,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator PlayerAnimator;
     private Animator HandAnimator;
     public GameObject _player;
-    public Sprite ShootingHands;
     public float FacingDirection
     {
         get { return facingDirection; }

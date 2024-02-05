@@ -16,44 +16,24 @@ public class Boss : MonoBehaviour
     public Transform _CameraTrigger;
 
     public CinemachineVirtualCamera _camera;
-    BossPhase Phases;
+
+    public EventPhases _EventPhases;
 
     public void StartPhase()
     {
-        Phases = BossPhase.First_Phase;
         _camera.m_Follow = _CameraTrigger;
         _camera.m_Lens.OrthographicSize = 6.88f;
-        switch (Phases)
-        {
-            case BossPhase.First_Phase:
-                FirstPhase();
-                break;
-                //case BossPhase.Second_Phase:
-                //    SecondPhase();
-                //    break;
-                //case BossPhase.Third_Phase:
-                //    ThirdPhase();
-                //    break;
-        }
+        _EventPhases._EventPhases(true, 3, 1);
+        FirstPhase();
     }
 
     private void FirstPhase()
     {
-        if(Phases == BossPhase.First_Phase)
+        BossAnimator.SetTrigger("FirstPhase");
+        foreach (var turret in _turretboss)
         {
-            BossAnimator.SetTrigger("FirstPhase");
-            foreach (var turret in _turretboss)
-            {
-                turret.canMove = true;
-            }
+            turret.canMove = true;
         }
-    }
-
-    enum BossPhase
-    {
-        First_Phase,
-        Second_Phase,
-        Third_Phase
     }
 
 }
