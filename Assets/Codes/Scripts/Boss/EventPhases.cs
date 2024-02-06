@@ -15,7 +15,11 @@ public class EventPhases : MonoBehaviour
             foreach (var ObjectEventPhases in eventPhases)
             {
                 ObjectEventPhases.SetActive(PassPhase);
-                yield return new WaitForSeconds(wait);
+            }
+            yield return new WaitForSeconds(wait);
+            foreach (var ObjectEventPhases in eventPhases)
+            {
+                ObjectEventPhases.SetActive(PassPhase);
                 ObjectEventPhases.SetActive(!PassPhase);
             }
         }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ShootingTrigger : MonoBehaviour
 {
-    public bool shootingTrigger;
+    //public bool shootingTrigger;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            shootingTrigger = true;
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Player")
+    //    {
+    //        shootingTrigger = true;
+    //    }
+    //}
 }

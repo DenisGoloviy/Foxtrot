@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurretBoss : MonoBehaviour
 {
-    ShootingTrigger shootingTrigger;
+    TriggerBoss TriggerBoss;
     public float speed = 3;
     public float UpAndDownEdge;
     public HealthSystem healthSystem;
@@ -15,6 +15,7 @@ public class TurretBoss : MonoBehaviour
     public int turretHP = 30;
     public Shooting shooting;
     public bool canMove;
+    public bool shootingTrigger;
 
     private void Update()
     {
@@ -22,7 +23,6 @@ public class TurretBoss : MonoBehaviour
         {
             TurretMove();
         }
-
         SpawnBullet();
     }
 
@@ -49,9 +49,9 @@ public class TurretBoss : MonoBehaviour
         }
     }
 
-    void SpawnBullet()
+    public void SpawnBullet()
     {
-        if (shootingTrigger.shootingTrigger)
+        if (shootingTrigger)
         {
             Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
         }
