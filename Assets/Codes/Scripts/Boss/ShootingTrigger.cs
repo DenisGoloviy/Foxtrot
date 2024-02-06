@@ -8,6 +8,9 @@ public class ShootingTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        shootingTrigger = true;
+        if(collision.gameObject.tag == "Player")
+        {
+            shootingTrigger = true;
+        }
     }
 }

@@ -14,22 +14,16 @@ public class TurretBoss : MonoBehaviour
     public Transform shootingPoint;
     public int turretHP = 30;
     public Shooting shooting;
-    public bool canMove = false;
+    public bool canMove;
 
     private void Update()
     {
-            TurretMove();
-
-        if (shootingTrigger.shootingTrigger)
+        if (canMove)
         {
-            if (cooldownTime <= 0)
-            {
-                SpawnBullet();
-                cooldownTime = 2f;
-            }
+            TurretMove();
         }
 
-        cooldownTime -= Time.deltaTime;
+        SpawnBullet();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,7 +51,10 @@ public class TurretBoss : MonoBehaviour
 
     void SpawnBullet()
     {
-        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+        if (shootingTrigger.shootingTrigger)
+        {
+            Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+        }
     }
 
     public void TurretMove()
