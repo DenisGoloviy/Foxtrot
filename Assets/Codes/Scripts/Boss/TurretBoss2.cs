@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TurretBoss : MonoBehaviour
 {
-    TriggerBoss TriggerBoss;
-    public float speed = 3;
+    public float speed = 2;
     public float UpAndDownEdge;
     public HealthSystem healthSystem;
     public int damage = 4;
     public GameObject bullet;
-    public float cooldownTime = 2f;
+    public float cooldownTime = 1.5f;
     public Transform shootingPoint;
-    public int turretHP = 30;
+    public int turretHP = 5;
     public Shooting shooting;
     public bool canMove;
     public bool shootingTrigger;
@@ -23,7 +22,13 @@ public class TurretBoss : MonoBehaviour
         {
             TurretMove();
         }
-        SpawnBullet();
+        if(cooldownTime<= 0)
+        {
+            SpawnBullet();
+            cooldownTime = 1.5f;
+        }
+        
+        cooldownTime -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

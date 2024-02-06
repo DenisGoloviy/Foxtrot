@@ -33,6 +33,7 @@ public class Boss : MonoBehaviour
         foreach (var turret in _turretboss)
         {
             turret.canMove = true;
+            turret.shootingTrigger = true;
         }
     }
 

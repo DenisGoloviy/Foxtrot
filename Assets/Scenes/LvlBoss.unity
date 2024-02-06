@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 28402902}
   - component: {fileID: 28402903}
-  - component: {fileID: 28402904}
   - component: {fileID: 28402905}
+  - component: {fileID: 28402906}
   m_Layer: 0
   m_Name: Turret1
   m_TagString: Untagged
@@ -210,29 +210,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &28402904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28402901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5677bcfbd4bc8624f9b7de9fd2615c14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  UpAndDownEdge: 3
-  healthSystem: {fileID: 1767755930}
-  damage: 2
-  bullet: {fileID: 1092339787320635913, guid: 774c3d54b4c33174793f7c1c500909a3, type: 3}
-  cooldownTime: 1.5
-  shootingPoint: {fileID: 1831487366}
-  turretHP: 5
-  shooting: {fileID: 1767755931}
-  canMove: 0
-  shootingTrigger: 0
 --- !u!61 &28402905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -278,6 +255,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39, y: 0.26}
   m_EdgeRadius: 0
+--- !u!114 &28402906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28402901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5677bcfbd4bc8624f9b7de9fd2615c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  UpAndDownEdge: 3
+  healthSystem: {fileID: 1767755930}
+  damage: 4
+  bullet: {fileID: 1092339787320635913, guid: 774c3d54b4c33174793f7c1c500909a3, type: 3}
+  cooldownTime: 1.5
+  shootingPoint: {fileID: 1831487366}
+  turretHP: 5
+  shooting: {fileID: 1767755931}
+  canMove: 0
+  shootingTrigger: 0
 --- !u!1 &154642898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3472,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.5803106, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.58058, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3560,7 +3560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turretboss:
-  - {fileID: 28402904}
+  - {fileID: 28402906}
   - {fileID: 770631603}
   _trigger: {fileID: 192578740}
   BossAnimator: {fileID: 555798779}
@@ -18791,7 +18791,7 @@ Transform:
   m_GameObject: {fileID: 1831487365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.234, y: -0.012, z: 0}
+  m_LocalPosition: {x: 0.277, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
