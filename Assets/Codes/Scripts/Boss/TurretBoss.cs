@@ -15,6 +15,7 @@ public class TurretBoss : MonoBehaviour
     public Shooting shooting;
     public bool canMove;
     public bool shootingTrigger;
+    public Boss boss;
 
     private void Update()
     {
@@ -40,6 +41,11 @@ public class TurretBoss : MonoBehaviour
             if (turretHP <= 0)
             {
                 Destroy(gameObject);
+                boss._DestroyTurrets++;
+                if (boss._DestroyTurrets == 2)
+                {
+                    boss.SecondPhase();
+                }
             }
         }
     }

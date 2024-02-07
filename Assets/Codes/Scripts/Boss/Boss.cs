@@ -19,6 +19,8 @@ public class Boss : MonoBehaviour
 
     public EventPhases _EventPhases;
 
+    public int _DestroyTurrets;
+
     public void StartPhase()
     {
         _camera.m_Follow = _CameraTrigger;
@@ -35,6 +37,11 @@ public class Boss : MonoBehaviour
             turret.canMove = true;
             turret.shootingTrigger = true;
         }
+    }
+
+    public void SecondPhase()
+    {
+        //Функії, які відповідають за спавн та за стрельбу боса    
     }
 
 }

@@ -278,6 +278,7 @@ MonoBehaviour:
   shooting: {fileID: 1767755931}
   canMove: 0
   shootingTrigger: 0
+  boss: {fileID: 555798778}
 --- !u!1 &154642898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,7 +3473,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.5814965, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.5803053, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3567,6 +3568,7 @@ MonoBehaviour:
   _CameraTrigger: {fileID: 1414330310}
   _camera: {fileID: 1412132650}
   _EventPhases: {fileID: 1204516883}
+  _DestroyTurrets: 0
 --- !u!95 &555798779
 Animator:
   serializedVersion: 5
@@ -3907,6 +3909,7 @@ MonoBehaviour:
   shooting: {fileID: 1767755931}
   canMove: 0
   shootingTrigger: 0
+  boss: {fileID: 555798778}
 --- !u!61 &770631604
 BoxCollider2D:
   m_ObjectHideFlags: 0
