@@ -10,6 +10,7 @@ public class TriggerBoss : MonoBehaviour
 
     public TurretBoss turret;
 
+    public EventPhases _EventPhases;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +22,7 @@ public class TriggerBoss : MonoBehaviour
             boss.StartPhase();
             turret.canMove = true;
             turret.shootingTrigger = true;
+            _EventPhases._EventPhases(true, 3, 0);
         }
     }
 }

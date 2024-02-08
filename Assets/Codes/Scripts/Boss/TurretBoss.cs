@@ -16,7 +16,7 @@ public class TurretBoss : MonoBehaviour
     public bool canMove;
     public bool shootingTrigger;
     public Boss boss;
-
+    Animator _AnimTurret;
     private void Update()
     {
         if (canMove)
@@ -30,6 +30,11 @@ public class TurretBoss : MonoBehaviour
         }
         
         cooldownTime -= Time.deltaTime;
+    }
+
+    private void Start()
+    {
+        _AnimTurret = gameObject.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -65,6 +70,7 @@ public class TurretBoss : MonoBehaviour
         if (shootingTrigger)
         {
             Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+            _AnimTurret.SetTrigger("IsShooting");
         }
     }
 
