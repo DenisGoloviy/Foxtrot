@@ -16,22 +16,20 @@ public class EventPhases : MonoBehaviour
     }
     public void _EventPhases(bool PassPhase, int wait, int massive)
     {
-        StartCoroutine(disappear());
+        StartCoroutine(disappear(PassPhase,wait));
         eventPhases[1].GetComponent<SpriteRenderer>().sprite = Phases[massive];
-        IEnumerator disappear()
-        {
-            foreach (var ObjectEventPhases in eventPhases)
-            {
-                ObjectEventPhases.SetActive(PassPhase);
-            }
-            yield return new WaitForSeconds(wait);
-            foreach (var ObjectEventPhases in eventPhases)
-            {
-                ObjectEventPhases.SetActive(PassPhase);
-                ObjectEventPhases.SetActive(!PassPhase);
-            }
-        }
     }
 
-
+    IEnumerator disappear(bool PassPhase, int wait)
+    {
+        foreach (var ObjectEventPhases in eventPhases)
+        {
+            ObjectEventPhases.SetActive(PassPhase);
+        }
+        yield return new WaitForSeconds(wait);
+        foreach (var ObjectEventPhases in eventPhases)
+        {
+            ObjectEventPhases.SetActive(!PassPhase);
+        }
+    }
 }
