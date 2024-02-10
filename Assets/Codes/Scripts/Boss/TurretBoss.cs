@@ -17,6 +17,7 @@ public class TurretBoss : MonoBehaviour
     public bool shootingTrigger;
     public Boss boss;
     Animator _AnimTurret;
+    public EventPhases _EventPhases;
     private void Update()
     {
         if (canMove)
@@ -45,11 +46,12 @@ public class TurretBoss : MonoBehaviour
             turretHP -= shooting.damage;
             if (turretHP <= 0)
             {
-                Destroy(gameObject);
+                _AnimTurret.SetTrigger("_IsDeath");
                 boss._DestroyTurrets++;
                 if (boss._DestroyTurrets == 2)
                 {
                     boss.SecondPhase();
+                    _EventPhases._EventPhases(true, 3, 1);
                 }
             }
         }
