@@ -18,13 +18,12 @@ public class SelectCoins : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine(Destroy());
+            CoinAnimator.SetTrigger("Destroy");
+            Invoke(nameof(Destroy), 0.5f);
         }
     }
-    IEnumerator Destroy()
+    void Destroy()
     {
-        CoinAnimator.SetTrigger("Destroy");
-        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }

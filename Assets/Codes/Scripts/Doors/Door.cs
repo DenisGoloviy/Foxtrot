@@ -15,7 +15,9 @@ public class Door : MonoBehaviour
     {
         if(button._isOpened == true)
         {
-            StartCoroutine(_dust());
+            gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
+            Invoke(nameof(Dest), 0.65f);
+            Enter();
         }
     }
 
@@ -43,11 +45,9 @@ public class Door : MonoBehaviour
             SceneManager.LoadScene(Scene);
         }
     }
-    IEnumerator _dust()
+
+    void Dest()
     {
-        gameObject.GetComponent<Animator>().SetTrigger("IsOpened");
-        yield return new WaitForSeconds(0.74f);
         dust.GetComponent<Animator>().SetTrigger("IsDust");
-        Enter();
     }
 }

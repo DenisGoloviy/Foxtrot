@@ -76,14 +76,13 @@ public class Enemy : MonoBehaviour
             enemyHP -= shooting.damage;
             if (enemyHP <= 0)
             {
-                StartCoroutine(Destroy());
+                EnemyAnimator.SetTrigger("Destroy");
+                Invoke(nameof(Destroy), 1);
             }
         }
     }
-    IEnumerator Destroy()
+    private void Destroy()
     {
-        EnemyAnimator.SetTrigger("Destroy");
-        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }

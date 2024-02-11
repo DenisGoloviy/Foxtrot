@@ -42,7 +42,6 @@ public class Boss : MonoBehaviour
         }
         mobsSpawned = true;
     }
-   
 
     private void FirstPhase()
     {
@@ -78,5 +77,4 @@ public class Boss : MonoBehaviour
             SecondPhase();
         }
     }
-
 }
