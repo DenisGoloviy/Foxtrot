@@ -3766,10 +3766,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1150971856759080230, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 236.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150971856759080230, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 77.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150971856759080230, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -820
+      objectReference: {fileID: 0}
+    - target: {fileID: 1150971856759080230, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 350.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2025134142384929708, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: health
       value: 
       objectReference: {fileID: 1767755930}
+    - target: {fileID: 5480508733388779543, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_fontSize
+      value: 48.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480508733388779543, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48.88
+      objectReference: {fileID: 0}
     - target: {fileID: 5926847028769951679, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: health
       value: 

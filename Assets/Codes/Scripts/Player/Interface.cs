@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Interface : MonoBehaviour
 {
@@ -19,10 +20,15 @@ public class Interface : MonoBehaviour
 
     public HealthSystem health;
 
+    [Header("Coins:")]
+    public TextMeshProUGUI countCoin;
+    public static float CountCoin = 0;
+
     void Update()
     {
         _Help();
         _Bars();
+        countCoin.text = $"{CountCoin}";
     }
 
     void _Bars()

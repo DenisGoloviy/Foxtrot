@@ -20,6 +20,7 @@ public class SelectCoins : MonoBehaviour
         {
             CoinAnimator.SetTrigger("Destroy");
             Invoke(nameof(Destroy), 0.5f);
+            Interface.CountCoin += 00001;
         }
     }
     void Destroy()

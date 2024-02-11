@@ -9318,6 +9318,14 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 6282315203997595400}
+    - target: {fileID: 1525939334675629639, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -403.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525939334675629639, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4039381970043118114, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9406,6 +9414,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 7975501953775911437, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -309.68002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975501953775911437, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 224.23997
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
