@@ -12761,6 +12761,18 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 1646995910}
+    - target: {fileID: 7242187181379763655, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Collider.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242187181379763655, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Collider.Array.data[0]
+      value: 
+      objectReference: {fileID: 5599512866541824401, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
+    - target: {fileID: 7242187181379763655, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Collider.Array.data[1]
+      value: 
+      objectReference: {fileID: 2675954925921572216, guid: 5c8e66d56a0267c4d806be8dee0a37b2, type: 3}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: enemy
       value: 

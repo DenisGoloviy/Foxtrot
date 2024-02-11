@@ -295,9 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519043d7e5a48a74a9b66bbb51f66524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   jumpForce: 6
-  playerStamina: 10
+  fox1Active: 1
   canMove: 1
   rb: {fileID: 8212354199956024350}
   _hands: {fileID: 121107236827434752}
@@ -317,8 +316,7 @@ MonoBehaviour:
   shootingPoint: {fileID: 69649537003591837}
   bullet: {fileID: 6150331768124553993, guid: 126212d9f5be4e345a75226bb03bdabf, type: 3}
   damage: 2
-  enemy: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
-  turret: {fileID: 1886534020165245675, guid: 2f9b7409f67f12c4c81b02ab3ddc0fd5, type: 3}
+  playerMovement: {fileID: 0}
 --- !u!114 &3111907330992781001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 10
+  _Interface: {fileID: 0}
 --- !u!114 &5448845547786931581
 MonoBehaviour:
   m_ObjectHideFlags: 0
