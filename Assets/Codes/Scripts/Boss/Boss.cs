@@ -1,4 +1,5 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -22,26 +23,9 @@ public class Boss : MonoBehaviour
     public int _DestroyTurrets;
     public GameObject bullet;
     public Transform shootingPoint;
-    private float timer = 2f;
     public Transform[] spawnPoints;
     public GameObject enemyPrefab;
     private bool mobsSpawned = false;
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-
-        if (_DestroyTurrets == 2f)
-        {
-            if(timer <= 0)
-            {
-                Shoot();
-                timer = 2f;
-            }
-        }
-
-        SpawnMobs();
-    }
 
     public void StartPhase()
     {
@@ -50,22 +34,15 @@ public class Boss : MonoBehaviour
         FirstPhase();
     }
 
-    private void Shoot()
-    {
-        Instantiate(bullet, shootingPoint.position, Quaternion.identity);
-    }
-
     private void SpawnMobs()
     {
-        if(_DestroyTurrets == 2 && !mobsSpawned)
+        for (int i = 0; i < spawnPoints.Length; i++)
         {
-            Instantiate(enemyPrefab, spawnPoints[0]);
-            Instantiate(enemyPrefab, spawnPoints[1]);
-            Instantiate(enemyPrefab, spawnPoints[2]);
-            Instantiate(enemyPrefab, spawnPoints[3]);
-            mobsSpawned = true;
+            Instantiate(enemyPrefab, spawnPoints[i]);
         }
+        mobsSpawned = true;
     }
+   
 
     private void FirstPhase()
     {
@@ -79,7 +56,27 @@ public class Boss : MonoBehaviour
 
     public void SecondPhase()
     {
+        if (!mobsSpawned)
+        {
+            SpawnMobs();
+        }
+        _EventPhases._EventPhases(true, 3, 1);
+        InvokeRepeating(nameof(SpawnBullet), 0,2);
         //Функії, які відповідають за спавн та за стрельбу боса    
+    }
+
+    private void SpawnBullet()
+    {
+        Instantiate(bullet, shootingPoint.position, Quaternion.identity);
+    }
+
+    public void UpdateDestroyedTurrets()
+    {
+        _DestroyTurrets++;
+        if (_DestroyTurrets == 2)
+        {
+            SecondPhase();
+        }
     }
 
 }

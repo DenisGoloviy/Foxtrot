@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 28402902}
   - component: {fileID: 28402903}
-  - component: {fileID: 28402905}
   - component: {fileID: 28402906}
+  - component: {fileID: 28402905}
   - component: {fileID: 28402907}
   m_Layer: 0
   m_Name: Turret1
@@ -280,7 +280,7 @@ MonoBehaviour:
   canMove: 0
   shootingTrigger: 0
   boss: {fileID: 555798778}
-  _EventPhases: {fileID: 0}
+  _EventPhases: {fileID: 1204516883}
 --- !u!95 &28402907
 Animator:
   serializedVersion: 5
@@ -480,7 +480,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorTrigger: {fileID: 1561474777}
   boss: {fileID: 555798778}
-  turret: {fileID: 770631603}
   _EventPhases: {fileID: 1204516883}
 --- !u!1 &369149726
 GameObject:
@@ -3497,7 +3496,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.58058, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.5814106, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3844,7 +3843,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3857,7 +3856,7 @@ Transform:
   m_GameObject: {fileID: 699413380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.62, y: -2.88, z: -0.59223914}
+  m_LocalPosition: {x: 9.45, y: -2.83, z: -0.59223914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3966,7 +3965,7 @@ MonoBehaviour:
   speed: 2
   UpAndDownEdge: 3
   healthSystem: {fileID: 1767755930}
-  damage: 2
+  damage: 4
   bullet: {fileID: 1092339787320635913, guid: 774c3d54b4c33174793f7c1c500909a3, type: 3}
   cooldownTime: 1.5
   shootingPoint: {fileID: 1145264833}
@@ -3975,7 +3974,7 @@ MonoBehaviour:
   canMove: 0
   shootingTrigger: 0
   boss: {fileID: 555798778}
-  _EventPhases: {fileID: 0}
+  _EventPhases: {fileID: 1204516883}
 --- !u!61 &770631604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6448,7 +6447,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6461,7 +6460,7 @@ Transform:
   m_GameObject: {fileID: 1164691097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.52, y: -2.86, z: -0.59223914}
+  m_LocalPosition: {x: 14.37, y: -2.55, z: -0.59223914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18961,7 +18960,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -18974,7 +18973,7 @@ Transform:
   m_GameObject: {fileID: 1845098156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.58, y: -2.97, z: -0.59223914}
+  m_LocalPosition: {x: 20.97, y: -2.32, z: -0.59223914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19076,7 +19075,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -19089,7 +19088,7 @@ Transform:
   m_GameObject: {fileID: 2052751777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.12, y: -2.86, z: -0.59223914}
+  m_LocalPosition: {x: 18.04, y: -2.68, z: -0.59223914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

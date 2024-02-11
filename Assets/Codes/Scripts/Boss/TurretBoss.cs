@@ -25,17 +25,11 @@ public class TurretBoss : MonoBehaviour
         {
             TurretMove();
         }
-        if(cooldownTime <= 0)
-        {
-            SpawnBullet();
-            cooldownTime = 1.5f;
-        }
-        
-        cooldownTime -= Time.deltaTime;
     }
 
     private void Start()
     {
+        InvokeRepeating(nameof(SpawnBullet), 0,cooldownTime);
         _AnimTurret = gameObject.GetComponent<Animator>();
     }
 
@@ -48,13 +42,10 @@ public class TurretBoss : MonoBehaviour
             if (turretHP <= 0)
             {
                 _AnimTurret.SetTrigger("_IsDeath");
-                boss._DestroyTurrets++;
-                if (boss._DestroyTurrets == 2)
-                {
-                    boss.SecondPhase();
-                    _EventPhases._EventPhases(true, 3, 1);
-                }
+                boss.UpdateDestroyedTurrets();
+                Destroy(this);
             }
+            print(gameObject.name);
         }
     }
 
