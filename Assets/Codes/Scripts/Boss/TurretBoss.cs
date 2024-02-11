@@ -18,13 +18,14 @@ public class TurretBoss : MonoBehaviour
     public Boss boss;
     Animator _AnimTurret;
     public EventPhases _EventPhases;
+
     private void Update()
     {
         if (canMove)
         {
             TurretMove();
         }
-        if(cooldownTime<= 0)
+        if(cooldownTime <= 0)
         {
             SpawnBullet();
             cooldownTime = 1.5f;
