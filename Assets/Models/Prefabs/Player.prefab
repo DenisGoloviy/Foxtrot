@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1536352038595961173}
   - component: {fileID: 8483451985542114074}
   - component: {fileID: 4019206561146824630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HandPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3111907330992781001}
   - component: {fileID: 5448845547786931581}
   - component: {fileID: 6417627104987839567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 69649537003591837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81ac4417e90b4545ac92817ec7be0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSystem: {fileID: 0}
   damage: 2
 --- !u!114 &4908030520131902779
 MonoBehaviour:
@@ -166,7 +165,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   maxHealth: 10
-  _Hand: {fileID: 0}
   _Interface: {fileID: 0}
 --- !u!61 &5599512866541824401
 BoxCollider2D:
