@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TurretBoss : MonoBehaviour
 {
-    public float speed = 2;
 
     public float speed = 3;
     public float UpAndDownEdge;
@@ -22,19 +21,7 @@ public class TurretBoss : MonoBehaviour
     public EventPhases _EventPhases;
     TriggerBoss trigger;
 
-    public bool canMove = false;
-
     public EventPhases eventPhases;
-    public Boss boss;
-
-    private void Start()
-    {
-        //InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
-    }
-    void SpawnBullet()
-    {
-            Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
-    }
 
     private void Update()
     {
