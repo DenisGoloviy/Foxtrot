@@ -8,6 +8,7 @@ using static UnityEngine.ParticleSystem;
 
 public class Boss : MonoBehaviour
 {
+    public int DeathTwoTurret;
 
     public TurretBoss[] _turretboss;
     public TriggerBoss _trigger;
@@ -31,6 +32,7 @@ public class Boss : MonoBehaviour
     {
         _camera.m_Follow = _CameraTrigger;
         _camera.m_Lens.OrthographicSize = 6.88f;
+        _EventPhases._EventPhases(true, 3, 0);
         FirstPhase();
     }
 

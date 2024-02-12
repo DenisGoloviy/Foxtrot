@@ -5,6 +5,8 @@ using UnityEngine;
 public class TurretBoss : MonoBehaviour
 {
     public float speed = 2;
+
+    public float speed = 3;
     public float UpAndDownEdge;
     public HealthSystem healthSystem;
     public int damage = 4;
@@ -18,6 +20,21 @@ public class TurretBoss : MonoBehaviour
     public Boss boss;
     Animator _AnimTurret;
     public EventPhases _EventPhases;
+    TriggerBoss trigger;
+
+    public bool canMove = false;
+
+    public EventPhases eventPhases;
+    public Boss boss;
+
+    private void Start()
+    {
+        //InvokeRepeating(nameof(SpawnBullet), 0, cooldownTime);
+    }
+    void SpawnBullet()
+    {
+            Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+    }
 
     private void Update()
     {
@@ -44,6 +61,12 @@ public class TurretBoss : MonoBehaviour
                 _AnimTurret.SetTrigger("_IsDeath");
                 boss.UpdateDestroyedTurrets();
                 Destroy(this);
+                boss.DeathTwoTurret++;
+                Destroy(gameObject);
+                if(boss.DeathTwoTurret == 2)
+                {
+                    eventPhases._EventPhases(true, 3, 1);
+                }
             }
             print(gameObject.name);
         }
