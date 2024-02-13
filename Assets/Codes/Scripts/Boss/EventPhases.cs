@@ -7,6 +7,13 @@ public class EventPhases : MonoBehaviour
     public GameObject[] eventPhases;
     public Sprite[] Phases;
 
+    private void Start()
+    {
+        foreach (var ObjectEventPhases in eventPhases)
+        {
+            ObjectEventPhases.SetActive(false);
+        }
+    }
     public void _EventPhases(bool PassPhase, int wait, int massive)
     {
         StartCoroutine(disappear(PassPhase,wait));

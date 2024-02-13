@@ -101,7 +101,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 240621445120689090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.77, y: -2.72, z: 0}
+  m_LocalPosition: {x: 10.6246, y: -2.3347, z: 0}
   m_LocalScale: {x: 7.4376755, y: 7.4376755, z: 7.4376755}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -278,7 +278,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -293,8 +293,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 519043d7e5a48a74a9b66bbb51f66524, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   jumpForce: 6
   fox1Active: 1
   canMove: 1
@@ -311,8 +311,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d645fe01dc4a854b806e75acea32c55, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   shootingPoint: {fileID: 69649537003591837}
   bullet: {fileID: 6150331768124553993, guid: 126212d9f5be4e345a75226bb03bdabf, type: 3}
   damage: 2
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a56e67e74fe6a944aaf639bacd4af866, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   health: 0
   maxHealth: 10
   _Interface: {fileID: 0}
@@ -342,8 +342,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc6a62cc23fade6478f6ec0378d89e88, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   rb: {fileID: 8212354199956024350}
 --- !u!114 &6417627104987839567
 MonoBehaviour:
@@ -355,23 +355,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce3de5828063cdd4d84263e730037a68, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   knockBackLength: 1.5
   knockBackForce: 5
---- !u!114 &9132062250606240186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240621445120689090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53b74bd815b2c2446bed5e529aca188f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  _count: {fileID: 0}
 --- !u!1 &3689200987811584135
 GameObject:
   m_ObjectHideFlags: 0

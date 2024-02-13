@@ -21,8 +21,6 @@ public class TurretBoss : MonoBehaviour
     public EventPhases _EventPhases;
     TriggerBoss trigger;
 
-    public EventPhases eventPhases;
-
     private void Update()
     {
         if (canMove)
@@ -48,12 +46,6 @@ public class TurretBoss : MonoBehaviour
                 _AnimTurret.SetTrigger("_IsDeath");
                 boss.UpdateDestroyedTurrets();
                 Destroy(this);
-                boss.DeathTwoTurret++;
-                Destroy(gameObject);
-                if(boss.DeathTwoTurret == 2)
-                {
-                    eventPhases._EventPhases(true, 3, 1);
-                }
             }
             print(gameObject.name);
         }
