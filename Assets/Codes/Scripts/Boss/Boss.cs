@@ -26,6 +26,7 @@ public class Boss : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject enemyPrefab;
     private bool mobsSpawned = false;
+    Enemy enemy;
 
     public void StartPhase()
     {
@@ -41,6 +42,7 @@ public class Boss : MonoBehaviour
             Instantiate(enemyPrefab, spawnPoints[i]);
         }
         mobsSpawned = true;
+        enemy.secondPhaseisActive = true;
     }
 
     private void FirstPhase()
