@@ -256,7 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
 --- !u!61 &90140815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -565,7 +564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
 --- !u!212 &1019403959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -971,7 +969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
 --- !u!212 &1459546231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1122,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e30b6b4d760dde4ba992506a3ef7180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
+  _ScriptObjectButtons: {fileID: 0}
 --- !u!61 &1475741247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1501,7 +1498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a3611748b9add4685f483c00f76bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
+  _ScriptObjectButtons: {fileID: 0}
   MainMenu: {fileID: 1141855314}
   Settings: {fileID: 1951058644}
 --- !u!1 &1842332394
@@ -1647,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fdb2ce08507ca488850786e579339a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
+  _ScriptObjectButtons: {fileID: 0}
 --- !u!1 &1951058644
 GameObject:
   m_ObjectHideFlags: 0
