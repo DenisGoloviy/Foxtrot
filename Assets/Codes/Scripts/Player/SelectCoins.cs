@@ -19,12 +19,8 @@ public class SelectCoins : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             CoinAnimator.SetTrigger("Destroy");
-            Invoke(nameof(Destroy), 0.5f);
-            Interface.CountCoin += 00001;
+            Destroy(gameObject, 0.5f);
+            Interface.CountCoin += 1;
         }
-    }
-    void Destroy()
-    {
-        Destroy(gameObject);
     }
 }

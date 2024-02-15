@@ -22,13 +22,13 @@ public class Interface : MonoBehaviour
 
     [Header("Coins:")]
     public TextMeshProUGUI countCoin;
-    public static float CountCoin = 0;
+    public static int CountCoin = 0;
 
     void Update()
     {
         _Help();
         _Bars();
-        countCoin.text = $"{CountCoin}";
+        countCoin.text = string.Format("{0:00000}",CountCoin);
     }
 
     void _Bars()
