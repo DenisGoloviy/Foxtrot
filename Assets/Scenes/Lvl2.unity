@@ -1114,7 +1114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1517412b4062e5f4abaab05b7b4a063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScriptObjectButtons: {fileID: 11400000, guid: b4e90edbdd62cc94f913d16700f3f838, type: 2}
 --- !u!61 &114016351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2067,6 +2066,10 @@ PrefabInstance:
       objectReference: {fileID: 1770981901}
     - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
       propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
+      propertyPath: leftAndRight
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}

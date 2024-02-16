@@ -5,8 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float moveSpeed = 1f;
-    public Transform[] patrolPoints;
-    public int patrolDestination;
+    public float leftAndRight;
 
     public Transform playerPosition;
     private bool isChasing;
@@ -51,23 +50,16 @@ public class Enemy : MonoBehaviour
                     isChasing = true;
                 }
 
-                if (patrolDestination == 0)
+                Vector3 pos = transform.position;
+                pos.x += moveSpeed * Time.deltaTime;
+                transform.position = pos;
+                if (pos.x < -leftAndRight)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
-                    if (Vector2.Distance(transform.position, patrolPoints[0].position) < .3f)
-                    {
-                        transform.localScale = new Vector3(8, 8, 8);
-                        patrolDestination = 1;
-                    }
+                    moveSpeed = Mathf.Abs(moveSpeed);
                 }
-                if (patrolDestination == 1)
+                else if (pos.x > leftAndRight)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
-                    if (Vector2.Distance(transform.position, patrolPoints[1].position) < .3f)
-                    {
-                        transform.localScale = new Vector3(-8, 8, 8);
-                        patrolDestination = 0;
-                    }
+                    moveSpeed = -Mathf.Abs(moveSpeed);
                 }
             }
         }
