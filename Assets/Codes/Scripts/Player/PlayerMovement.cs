@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator PlayerAnimator;
     private Animator HandAnimator;
     public GameObject _player;
+    public RuntimeAnimatorController BadPlayerAnimatorController;
+    public RuntimeAnimatorController PlayerAnimatorController;
+    public RuntimeAnimatorController BadHandAnimatorController;
     public float FacingDirection
     {
         get { return facingDirection; }
@@ -38,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        
         if (isGrounded && Input.GetButton("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -121,14 +124,18 @@ public class PlayerMovement : MonoBehaviour
         {
             walkSpeed = 4.5f;
             fox1Active = false;
+            PlayerAnimator.runtimeAnimatorController = BadPlayerAnimatorController;
+            HandAnimator.runtimeAnimatorController = BadHandAnimatorController;
         }
 
         else if (Input.GetKeyDown(KeyCode.Q) && !fox1Active)
         {
-                walkSpeed = 3f;
-                fox1Active = true;
-
+            walkSpeed = 3f;
+            fox1Active = true;
+            PlayerAnimator.runtimeAnimatorController = PlayerAnimatorController;
+            BadHandAnimatorController = HandAnimator.runtimeAnimatorController;
         }
+
     }
 }
 

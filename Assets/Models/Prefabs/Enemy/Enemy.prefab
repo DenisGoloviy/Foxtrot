@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2165925566294001932}
   - component: {fileID: 6025824085989120481}
   - component: {fileID: 1975013065168789177}
-  - component: {fileID: 4908030520131902779}
   - component: {fileID: 5599512866541824401}
   - component: {fileID: 9175005781097247985}
   m_Layer: 0
@@ -103,14 +102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  patrolDestination: 0
+  leftAndRight: 0
   playerPosition: {fileID: 0}
   chaseDistance: 3
   enemyHP: 10
   shooting: {fileID: 0}
+  secondPhaseisActive: 0
 --- !u!50 &6025824085989120481
 Rigidbody2D:
   serializedVersion: 4
@@ -151,21 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
---- !u!114 &4908030520131902779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5805145867762407235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a56e67e74fe6a944aaf639bacd4af866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  _Interface: {fileID: 0}
 --- !u!61 &5599512866541824401
 BoxCollider2D:
   m_ObjectHideFlags: 0

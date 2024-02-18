@@ -2070,7 +2070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
       propertyPath: leftAndRight
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2165925566294001932, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
       propertyPath: playerPosition
@@ -2185,7 +2185,7 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1242645773090307093, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 1582707165277073427, guid: 9d9cf434cd6e80d4e906b1b38ee65dee, type: 3}
     m_AddedGameObjects: []

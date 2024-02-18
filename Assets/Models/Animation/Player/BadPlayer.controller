@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 437dd4b3e69fb1f4a92188ae576e8136, type: 2}
+  m_Motion: {fileID: 0}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ace05963f8469934d9c501955a2c5456, type: 2}
+  m_Motion: {fileID: 7400000, guid: f9db6db670bbed64ea7b649ab17cc946, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -140,7 +140,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: BadPlayer
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsWalking
@@ -331,7 +331,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fe9daf1841d18a240b9abcda8e8d6d44, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9dbdcbb350109db43b11915f8aff151a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
