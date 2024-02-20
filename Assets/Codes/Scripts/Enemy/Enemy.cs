@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public float moveSpeed = 1f;
     public float leftAndRight;
+    public Transform[] patrolPoints;
+    private int patrolDestination = 1;
 
     public Transform playerPosition;
     private bool isChasing;
@@ -30,12 +32,12 @@ public class Enemy : MonoBehaviour
             {
                 if (transform.position.x > playerPosition.position.x)
                 {
-                    transform.localScale = new Vector3(8, 8, 8);
+                    transform.localScale = new Vector3(-8, 8, 8);
                     transform.position += Vector3.left * moveSpeed * Time.deltaTime;
                 }
                 if (transform.position.x < playerPosition.position.x)
                 {
-                    transform.localScale = new Vector3(-8, 8, 8);
+                    transform.localScale = new Vector3(8, 8, 8);
                     transform.position += Vector3.right * moveSpeed * Time.deltaTime;
                 }
                 if (Vector2.Distance(transform.position, playerPosition.position) > chaseDistance)
@@ -50,16 +52,23 @@ public class Enemy : MonoBehaviour
                     isChasing = true;
                 }
 
-                Vector3 pos = transform.position;
-                pos.x += moveSpeed * Time.deltaTime;
-                transform.position = pos;
-                if (pos.x < -leftAndRight)
+                if (patrolDestination == 0)
                 {
-                    moveSpeed = Mathf.Abs(moveSpeed);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+                    if (Vector2.Distance(transform.position, patrolPoints[0].position) < .3f)
+                    {
+                        transform.localScale = new Vector3(8, 8, 8);
+                        patrolDestination = 1;
+                    }
                 }
-                else if (pos.x > leftAndRight)
+                if (patrolDestination == 1)
                 {
-                    moveSpeed = -Mathf.Abs(moveSpeed);
+                    transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
+                    if (Vector2.Distance(transform.position, patrolPoints[1].position) < .3f)
+                    {
+                        transform.localScale = new Vector3(-8, 8, 8);
+                        patrolDestination = 0;
+                    }
                 }
             }
         }
