@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject _player;
     public RuntimeAnimatorController BadPlayerAnimatorController;
     public RuntimeAnimatorController PlayerAnimatorController;
+    public RuntimeAnimatorController HandAnimatorController;
     public RuntimeAnimatorController BadHandAnimatorController;
     public float FacingDirection
     {
@@ -133,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
             walkSpeed = 3f;
             fox1Active = true;
             PlayerAnimator.runtimeAnimatorController = PlayerAnimatorController;
-            BadHandAnimatorController = HandAnimator.runtimeAnimatorController;
+            HandAnimator.runtimeAnimatorController = HandAnimatorController;
         }
 
     }

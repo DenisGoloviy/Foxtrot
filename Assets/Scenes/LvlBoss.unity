@@ -335,8 +335,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 122538857}
     - target: {fileID: 1525939334675629639, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 113.29999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525939334675629639, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -41.134995
+      value: -41.13501
       objectReference: {fileID: 0}
     - target: {fileID: 3700997288090206670, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3705,7 +3709,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490047, y: -2.5814269, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.58058, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5768,6 +5772,14 @@ PrefabInstance:
       propertyPath: _Interface
       value: 
       objectReference: {fileID: 122538856}
+    - target: {fileID: 4019206561146824630, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a5c7092fad7405c41b16394e4a993596, type: 2}
+    - target: {fileID: 5325490869141857039, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 63e5bd4fa6a026049baa53d66ccb6c0a, type: 2}
     - target: {fileID: 6693463926215988910, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.49
@@ -5824,6 +5836,26 @@ PrefabInstance:
       propertyPath: Collider.Array.data[1]
       value: 
       objectReference: {fileID: 2675954925921572216, guid: 5c8e66d56a0267c4d806be8dee0a37b2, type: 3}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: HandAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: a5c7092fad7405c41b16394e4a993596, type: 2}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: PlayerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 63e5bd4fa6a026049baa53d66ccb6c0a, type: 2}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: BadHandAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: b208f352e5d416a40b1d573d821abcf6, type: 2}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: BadPlayerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 8140350fe99a2874f9cb2e5c379cfe6b, type: 2}
+    - target: {fileID: 8483451985542114074, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 588779329, guid: 1c7051b9998a99e46b609805429bcfa1, type: 3}
     m_RemovedComponents:
     - {fileID: 9132062250606240186, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
     m_RemovedGameObjects: []
