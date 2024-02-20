@@ -12628,6 +12628,14 @@ PrefabInstance:
       propertyPath: _Interface
       value: 
       objectReference: {fileID: 2098361989}
+    - target: {fileID: 4019206561146824630, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a5c7092fad7405c41b16394e4a993596, type: 2}
+    - target: {fileID: 5325490869141857039, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 63e5bd4fa6a026049baa53d66ccb6c0a, type: 2}
     - target: {fileID: 6693463926215988910, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.77
@@ -12692,6 +12700,18 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1839379921}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: PlayerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 63e5bd4fa6a026049baa53d66ccb6c0a, type: 2}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: BadHandAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: b208f352e5d416a40b1d573d821abcf6, type: 2}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: BadPlayerAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: 8140350fe99a2874f9cb2e5c379cfe6b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
