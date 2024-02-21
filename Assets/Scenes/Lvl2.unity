@@ -12697,9 +12697,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1770981904}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Dust
+      value: 
+      objectReference: {fileID: 1872784817}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1839379921}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: HandAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: a5c7092fad7405c41b16394e4a993596, type: 2}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: PlayerAnimatorController
       value: 
@@ -12717,6 +12725,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+--- !u!1 &1872784817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7339208187186205400, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+  m_PrefabInstance: {fileID: 1872784816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1881303499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9176589984202053521, guid: 56e9de5a77005694db9f0872eecd355a, type: 3}

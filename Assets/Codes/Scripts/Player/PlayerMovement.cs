@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float walkSpeed = 5f;
+    private float walkSpeed = 3f;
     private bool isFacingRight = true;
     public float jumpForce = 8f;
     private bool isGrounded = false;
@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     public RuntimeAnimatorController PlayerAnimatorController;
     public RuntimeAnimatorController HandAnimatorController;
     public RuntimeAnimatorController BadHandAnimatorController;
+
+    public GameObject Dust;
+    private Animator DustAnimator;
     public float FacingDirection
     {
         get { return facingDirection; }
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        DustAnimator = Dust.GetComponent<Animator>();
         PlayerAnimator = gameObject.GetComponent<Animator>();
         HandAnimator = _hands.GetComponent<Animator>();
     }
@@ -125,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         {
             walkSpeed = 4.5f;
             fox1Active = false;
+            DustAnimator.SetTrigger("IsQ");
             PlayerAnimator.runtimeAnimatorController = BadPlayerAnimatorController;
             HandAnimator.runtimeAnimatorController = BadHandAnimatorController;
         }
@@ -133,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
         {
             walkSpeed = 3f;
             fox1Active = true;
+            DustAnimator.SetTrigger("IsQ");
             PlayerAnimator.runtimeAnimatorController = PlayerAnimatorController;
             HandAnimator.runtimeAnimatorController = HandAnimatorController;
         }

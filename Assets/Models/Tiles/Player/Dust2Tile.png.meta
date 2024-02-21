@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c7051b9998a99e46b609805429bcfa1
+guid: 05f9458b805ebb5498599f7fced1a1bd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,85 +123,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilePlayer_0
+      name: Dust2Tile_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 19
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f77c6cea3b81ad346b727408250c8670
-      internalID: -1282981332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilePlayer_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 4
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f3eeb55cce056d44abce11dcf7badd6
-      internalID: 588779329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilePlayer_2
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 0
-        width: 21
-        height: 23
+        x: 84
+        y: 6
+        width: 33
+        height: 32
       alignment: 9
-      pivot: {x: 0.52380955, y: 0.5217391}
+      pivot: {x: 0.5151515, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6a1e9169d6c094ab28d7f89d932c92
-      internalID: -889590648
+      spriteID: 4adf546f6ce28f0449b7794de3d1145a
+      internalID: -744208168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilePlayer_3
+      name: Dust2Tile_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 4
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 42
+        y: 6
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc7e0dda515d6648a07ea294af898d3
-      internalID: 1180780694
+      spriteID: 7bf751d2785ca304f93f5383c93ccddd
+      internalID: 1233514875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dust2Tile_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 6
+        width: 33
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d290704dc38d77f43a577e5ea04d066f
+      internalID: -1912591584
       vertices: []
       indices: 
       edges: []
@@ -217,10 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TilePlayer_0: -1282981332
-      TilePlayer_1: 588779329
-      TilePlayer_2: -889590648
-      TilePlayer_3: 1180780694
+      Dust2Tile_0: -744208168
+      Dust2Tile_1: 1233514875
+      Dust2Tile_2: -1912591584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

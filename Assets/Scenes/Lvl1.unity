@@ -9578,6 +9578,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6282315203997595401}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Dust
+      value: 
+      objectReference: {fileID: 6282315203997595402}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: HandAnimatorController
       value: 
       objectReference: {fileID: 9100000, guid: a5c7092fad7405c41b16394e4a993596, type: 2}
@@ -9620,6 +9624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519043d7e5a48a74a9b66bbb51f66524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6282315203997595402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7339208187186205400, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+  m_PrefabInstance: {fileID: 6282315203997595399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6601955764294501639
 PrefabInstance:
   m_ObjectHideFlags: 0

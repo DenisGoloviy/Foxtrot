@@ -3709,7 +3709,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.58058, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.5801566, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4146,6 +4146,11 @@ PrefabInstance:
       addedObject: {fileID: 122538858}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+--- !u!1 &662196996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7339208187186205400, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+  m_PrefabInstance: {fileID: 922387907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &669202679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5768,6 +5773,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2310820858860353929, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a61b99db19f272a4fa2c0869171edace, type: 2}
     - target: {fileID: 3111907330992781001, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: _Interface
       value: 
@@ -5836,6 +5845,10 @@ PrefabInstance:
       propertyPath: Collider.Array.data[1]
       value: 
       objectReference: {fileID: 2675954925921572216, guid: 5c8e66d56a0267c4d806be8dee0a37b2, type: 3}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Dust
+      value: 
+      objectReference: {fileID: 662196996}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: HandAnimatorController
       value: 

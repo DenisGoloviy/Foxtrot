@@ -12925,6 +12925,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2675954925921572216, guid: 5c8e66d56a0267c4d806be8dee0a37b2, type: 3}
     - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: Dust
+      value: 
+      objectReference: {fileID: 413395194}
+    - target: {fileID: 7288108564786831494, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 0}
@@ -12950,6 +12954,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+--- !u!1 &413395194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7339208187186205400, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+  m_PrefabInstance: {fileID: 413395193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &429102049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6405499391616554653, guid: ea477b2df4e3004448604f2b002de58f, type: 3}

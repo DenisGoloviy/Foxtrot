@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c7051b9998a99e46b609805429bcfa1
+guid: 4b45c6e7296078746aa8bfc4c8fe7af8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,76 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilePlayer_0
+      name: BadJumpTile_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 19
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f77c6cea3b81ad346b727408250c8670
-      internalID: -1282981332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilePlayer_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 4
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f3eeb55cce056d44abce11dcf7badd6
-      internalID: 588779329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilePlayer_2
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 0
+        x: 0
+        y: 18
         width: 21
         height: 23
-      alignment: 9
-      pivot: {x: 0.52380955, y: 0.5217391}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b6a1e9169d6c094ab28d7f89d932c92
-      internalID: -889590648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilePlayer_3
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 4
-        width: 11
-        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +137,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cc7e0dda515d6648a07ea294af898d3
-      internalID: 1180780694
+      spriteID: eca1e1a044c276149aeb279865fe0fc0
+      internalID: 821215505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BadJumpTile_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 12
+        height: 8
+      alignment: 9
+      pivot: {x: 0.50148517, y: 0.024507493}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b436a601e2ae40740b97c7dab1a9ffb2
+      internalID: -1838431582
       vertices: []
       indices: 
       edges: []
@@ -217,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TilePlayer_0: -1282981332
-      TilePlayer_1: 588779329
-      TilePlayer_2: -889590648
-      TilePlayer_3: 1180780694
+      BadJumpTile_0: 821215505
+      BadJumpTile_1: -1838431582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
