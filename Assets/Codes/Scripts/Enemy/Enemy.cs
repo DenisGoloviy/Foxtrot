@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyAnimator = GetComponent<Animator>();
     }
     void Update()

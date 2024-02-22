@@ -16,10 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public bool fox1Active = true;
     private bool doubleJump = true;
     public bool canMove = true;
-    [HideInInspector]
-    float facingDirection = 1;
+    private float facingDirection = 1;
 
-    [SerializeField] public Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     public GameObject _hands;
     private Animator PlayerAnimator;

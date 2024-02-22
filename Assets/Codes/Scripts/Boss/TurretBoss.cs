@@ -45,7 +45,7 @@ public class TurretBoss : MonoBehaviour
             {
                 _AnimTurret.SetTrigger("_IsDeath");
                 boss.UpdateDestroyedTurrets();
-                Destroy(this);
+                Destroy(gameObject);
             }
             print(gameObject.name);
         }

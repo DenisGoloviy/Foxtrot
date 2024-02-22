@@ -26,7 +26,6 @@ public class Boss : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject enemyPrefab;
     private bool mobsSpawned = false;
-    Enemy enemy;
 
     public void StartPhase()
     {
@@ -39,10 +38,10 @@ public class Boss : MonoBehaviour
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            Instantiate(enemyPrefab, spawnPoints[i]);
+            Enemy Spawned = Instantiate(enemyPrefab, spawnPoints[i]).GetComponent<Enemy>();
+            Spawned.secondPhaseisActive= true;
         }
         mobsSpawned = true;
-        enemy.secondPhaseisActive = true;
     }
 
     private void FirstPhase()
@@ -57,17 +56,20 @@ public class Boss : MonoBehaviour
 
     public void SecondPhase()
     {
+        print("SecondPhase");
         if (!mobsSpawned)
         {
             SpawnMobs();
         }
+        print("MobsSpawned");
         _EventPhases._EventPhases(true, 3, 1);
+        print("EventPhases");
         InvokeRepeating(nameof(SpawnBullet), 0,2);
-        //Функії, які відповідають за спавн та за стрельбу боса    
     }
 
     private void SpawnBullet()
     {
+        print("SpawnBullet");
         Instantiate(bullet, shootingPoint.position, Quaternion.identity);
     }
 
