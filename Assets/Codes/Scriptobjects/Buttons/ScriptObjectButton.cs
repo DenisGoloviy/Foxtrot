@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class ScriptObjectButtonButton : ScriptableObject
+public class ScriptObjectButton : ScriptableObject
 {
     [SerializeField] Sprite[] _ButtonPlay;
     [SerializeField] Sprite[] _ButtonLeave;

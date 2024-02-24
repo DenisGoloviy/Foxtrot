@@ -3496,7 +3496,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.00222, y: -2.580148, z: -10}
+  m_LocalPosition: {x: 12.026306, y: -2.580148, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4040,7 +4040,7 @@ PrefabInstance:
     - target: {fileID: 5926847028769951679, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: Interface
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2095097395}
     - target: {fileID: 5926847028769951679, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: _Interface
       value: 
@@ -6811,7 +6811,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 490491822005926093, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
   m_PrefabInstance: {fileID: 561897873}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2095097395}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e5321784ba01584d87e87ae5415cbb6, type: 3}
@@ -19534,6 +19534,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2095097395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6757228497559433095, guid: 582da33bf66e6584792ab605ccaf3dfd, type: 3}
+  m_PrefabInstance: {fileID: 561897873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6739097513124483499
 PrefabInstance:
   m_ObjectHideFlags: 0
