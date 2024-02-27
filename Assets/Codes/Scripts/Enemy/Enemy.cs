@@ -19,17 +19,10 @@ public class Enemy : MonoBehaviour
 
     private Animator EnemyAnimator;
 
-    SpriteRenderer renderer;
-    Rigidbody2D rb;
-    BoxCollider2D collider;
-
     void Start()
     {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         EnemyAnimator = GetComponent<Animator>();
-        renderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<BoxCollider2D>();
     }
     void Update()
     {
@@ -76,13 +69,6 @@ public class Enemy : MonoBehaviour
                     }
                 }
             }
-        
-        if (boss._DestroyTurrets == 2)
-        {
-            renderer.enabled = true;
-            rb.isKinematic = false;
-            collider.enabled = true;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

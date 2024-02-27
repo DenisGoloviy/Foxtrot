@@ -11,7 +11,8 @@ public class Boss : MonoBehaviour
 
     public TurretBoss[] _turretboss;
     public TriggerBoss _trigger;
-    Enemy enemy;
+    public GameObject enemy;
+    public GameObject enemy2;
 
     public Animator BossAnimator;
 
@@ -24,6 +25,12 @@ public class Boss : MonoBehaviour
     public int _DestroyTurrets;
     public GameObject bullet;
     public Transform shootingPoint;
+
+    private void Start()
+    {
+        enemy.SetActive(false);
+        enemy2.SetActive(false);
+    }
 
     public void StartPhase()
     {
@@ -64,6 +71,8 @@ public class Boss : MonoBehaviour
         if (_DestroyTurrets == 2)
         {
             SecondPhase();
+            enemy.SetActive(true);
+            enemy2.SetActive(true);
         }
     }
 }
