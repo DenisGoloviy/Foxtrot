@@ -20,7 +20,6 @@ public class Button : MonoBehaviour
     public GameObject SpriteButton;
 
     private Sprite[] currentButton;
-    private delegate void currentFunction();
 
     public ButtonArrayType buttonType;
 
@@ -29,7 +28,6 @@ public class Button : MonoBehaviour
         SwitchButton(false);
         SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButton[2];
     }
-
     private void OnMouseEnter()
     {
         SwitchButton(false);
@@ -56,6 +54,7 @@ public class Button : MonoBehaviour
                 break;
             case ButtonArrayType.Setting:
                 currentButton = ScriptObjectButton._buttonSetting;
+                SettingType(IsWork);
                 break;
             case ButtonArrayType.Leave:
                 currentButton = ScriptObjectButton._buttonLeave;
@@ -63,6 +62,7 @@ public class Button : MonoBehaviour
                 break;
             case ButtonArrayType.Help:
                 currentButton = ScriptObjectButton._buttonHelp;
+                HelpType(IsWork);
                 break;
             case ButtonArrayType.LeaveDeath:
                 currentButton = ScriptObjectButton._buttonLeave;
@@ -79,6 +79,24 @@ public class Button : MonoBehaviour
         {
             case true:
                 SceneManager.LoadScene(1);
+                break;
+        }
+    }
+    private void HelpType(bool IsWork)
+    {
+        switch (IsWork)
+        {
+            case true:
+                ////
+                break;
+        }
+    }
+    private void SettingType(bool IsWork)
+    {
+        switch (IsWork)
+        {
+            case true:
+                ////
                 break;
         }
     }
