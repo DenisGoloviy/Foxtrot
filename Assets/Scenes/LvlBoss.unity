@@ -3548,7 +3548,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.5803883, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.580397, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3758,7 +3758,7 @@ MonoBehaviour:
   _DestroyTurrets: 0
   bullet: {fileID: 1759927606635822483, guid: 0bf8143f80482ce4d89c48e745b5adc9, type: 3}
   shootingPoint: {fileID: 1387175026}
-  currentSceneName: End
+  currentSceneName: LvlBoss
   CountEnemy: 0
 --- !u!95 &555798779
 Animator:

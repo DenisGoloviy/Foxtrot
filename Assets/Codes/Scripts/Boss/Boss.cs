@@ -27,14 +27,15 @@ public class Boss : MonoBehaviour
     public GameObject bullet;
     public Transform shootingPoint;
 
-    public string currentSceneName = SceneManager.GetActiveScene().name;
-    //[HideInInspector]
+    public string currentSceneName;
+    [HideInInspector]
     public int CountEnemy;
 
     private void Start()
     {
         enemy.SetActive(false);
         enemy2.SetActive(false);
+        currentSceneName = SceneManager.GetActiveScene().name;
     }
 
     public void StartPhase()
@@ -56,11 +57,6 @@ public class Boss : MonoBehaviour
 
     public void SecondPhase()
     {
-        if(/*currentSceneName == "End" && */CountEnemy == 2) 
-        {
-            print("fd");
-            SceneManager.LoadScene(6);
-        }
         _EventPhases._EventPhases(true, 3, 1);
         print("EventPhases");
         InvokeRepeating(nameof(SpawnBullet), 0,2);
