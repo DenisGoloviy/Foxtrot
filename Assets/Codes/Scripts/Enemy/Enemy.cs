@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float leftAndRight;
     public Transform[] patrolPoints;
     private int patrolDestination = 1;
-    Boss boss;
+    public Boss boss;
 
     public Transform playerPosition;
     private bool isChasing;
@@ -81,6 +82,7 @@ public class Enemy : MonoBehaviour
             {
                 EnemyAnimator.SetTrigger("Destroy");
                 Invoke(nameof(Destroy), 1);
+                boss.CountEnemy++;
             }
         }
     }
