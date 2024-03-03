@@ -9,6 +9,7 @@ TagManager:
   - Box
   - Bullet
   - Enemy
+  - EnergyBall
   layers:
   - Default
   - TransparentFX

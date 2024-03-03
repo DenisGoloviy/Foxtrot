@@ -15,7 +15,7 @@ public class TurretDamage : MonoBehaviour
             collidedObject.GetComponent<KnockBack>().DoKnockBack();
             Destroy(gameObject);
         }
-        else
+        else if (collidedObject.tag == "EnergyBall")
         {
             Destroy(gameObject);
         }
