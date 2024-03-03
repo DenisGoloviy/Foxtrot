@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public float leftAndRight;
     public Transform[] patrolPoints;
     private int patrolDestination = 1;
-    public Boss boss;
 
     public Transform playerPosition;
     private bool isChasing;
@@ -82,8 +81,8 @@ public class Enemy : MonoBehaviour
             {
                 EnemyAnimator.SetTrigger("Destroy");
                 Destroy(gameObject, 1);
-                boss.CountEnemy++;
-                if (boss.currentSceneName == "LvlBoss" && boss.CountEnemy == 2)
+                Boss.CountEnemy++;
+                if (Boss.currentSceneName == "LvlBoss" && Boss.CountEnemy == 2)
                 {
                     SceneManager.LoadScene(6);
                 }

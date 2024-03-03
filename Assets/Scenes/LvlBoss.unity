@@ -3548,7 +3548,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.490048, y: -2.580397, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.5803792, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3758,8 +3758,6 @@ MonoBehaviour:
   _DestroyTurrets: 0
   bullet: {fileID: 1759927606635822483, guid: 0bf8143f80482ce4d89c48e745b5adc9, type: 3}
   shootingPoint: {fileID: 1387175026}
-  currentSceneName: LvlBoss
-  CountEnemy: 0
 --- !u!95 &555798779
 Animator:
   serializedVersion: 5
@@ -3965,6 +3963,34 @@ PrefabInstance:
       propertyPath: countCoin
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonCanvas, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888582089489669125, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2992850996968211119, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4008,7 +4034,7 @@ PrefabInstance:
     - target: {fileID: 5926847028769951679, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: Death
       value: 
-      objectReference: {fileID: 1683129878}
+      objectReference: {fileID: 1179472885}
     - target: {fileID: 5926847028769951679, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: health
       value: 
@@ -4025,10 +4051,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7475913430676756576, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7582772481764934754, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 392260464}
+    - target: {fileID: 7760860280438232064, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 392260464}
+    - target: {fileID: 7760860280438232064, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7760860280438232064, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 8494738952908034552, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.182194
@@ -4089,10 +4131,12 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 392260464}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8690030745237965632, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5121249146704424166, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
     - {fileID: 7065568644259485816, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+    - {fileID: 8207972854758840534, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8494738952908034552, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       insertIndex: -1
@@ -6901,6 +6945,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1179472885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 921398438681535712, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+  m_PrefabInstance: {fileID: 627598349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1204516883 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4690019722506588155, guid: 711815df5d9d4614d81e880054661530, type: 3}
@@ -19128,11 +19177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1683129878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7261122598925258249, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
-  m_PrefabInstance: {fileID: 627598349}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1688571138
 GameObject:
   m_ObjectHideFlags: 0
