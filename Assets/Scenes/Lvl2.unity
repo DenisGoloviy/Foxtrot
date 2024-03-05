@@ -31199,6 +31199,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 368.32
       objectReference: {fileID: 0}
+    - target: {fileID: 1200248913873884054, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1578272838}
+    - target: {fileID: 1200248913873884054, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1960194537043546065, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31287,10 +31295,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7475913430676756576, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7582772481764934754, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1578272838}
+    - target: {fileID: 7760860280438232064, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1578272838}
+    - target: {fileID: 7760860280438232064, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7889399926792617898, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -6.000002

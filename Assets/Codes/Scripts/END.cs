@@ -14,21 +14,22 @@ public class END : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < Stars.Length; i++)
+        Interface.CountCoin = Points;
+        for (int i = Stars.Length - 1; i >= 0; i--)
         {
-            switch(Points)
+            switch(Interface.CountCoin)
             {
-                case 0:
+                case int n when (Interface.CountCoin < 10):
                     Stars[i].GetComponent<SpriteRenderer>().sprite = StarSprite[1];
                     break;
-                case 1:
-                    Stars[0].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
+                case int n when (Interface.CountCoin >= 10 && Interface.CountCoin < 20):
+                    Stars[i-2].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
                     break;
-                case 2:
-                    Stars[1].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
+                case int n when (Interface.CountCoin >= 20 && Interface.CountCoin < 30):
+                    Stars[i-1].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
                     break;
-                case 3:
-                    Stars[2].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
+                case 30:
+                    Stars[i].GetComponent<SpriteRenderer>().sprite = StarSprite[0];
                 break;
             }
 
