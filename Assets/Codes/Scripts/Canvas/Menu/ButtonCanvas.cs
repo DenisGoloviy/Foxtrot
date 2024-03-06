@@ -11,19 +11,17 @@ public class ButtonCanvas : MonoBehaviour
 
     public Image SpriteButton;
 
-    public void OnMouseUpAsButton()
+    public void IsClick()
     {
-        print("1");
         SpriteButton.GetComponent<Image>().sprite = ScriptObjectButton._buttonLeave[0];
+        SceneManager.LoadScene(0);
     }
     public void IsNotClick()
     {
-        print("2");
         SpriteButton.GetComponent<Image>().sprite = ScriptObjectButton._buttonLeave[1];
     }
     public void IsOnButton()
     {
-        print("3");
         SpriteButton.GetComponent<Image>().sprite = ScriptObjectButton._buttonLeave[2];
     }
 
