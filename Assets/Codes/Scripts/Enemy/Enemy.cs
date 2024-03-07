@@ -80,13 +80,19 @@ public class Enemy : MonoBehaviour
             if (enemyHP <= 0)
             {
                 EnemyAnimator.SetTrigger("Destroy");
-                Destroy(gameObject, 1);
-                Boss.CountEnemy++;
-                if (Boss.currentSceneName == "LvlBoss" && Boss.CountEnemy == 2)
-                {
-                    SceneManager.LoadScene(6);
-                }
+                Invoke(nameof(Death), 1);
+            }
+            if (Boss.currentSceneName == "LvlBoss" && Boss.CountEnemy == 2)
+            {
+                print("f");
+                SceneManager.LoadScene(6);
             }
         }
+    }
+
+    private void Death()
+    {
+        Boss.CountEnemy++;
+        Destroy(gameObject, 1);
     }
 }

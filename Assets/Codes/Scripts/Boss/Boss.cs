@@ -28,7 +28,6 @@ public class Boss : MonoBehaviour
     public Transform shootingPoint;
 
     public static string currentSceneName;
-    [HideInInspector]
     public static int CountEnemy;
 
     private void Start()
