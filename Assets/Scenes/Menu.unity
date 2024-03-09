@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
   SpriteButton: {fileID: 90140811}
+  WindowButton: []
   buttonType: 0
 --- !u!1 &501092363
 GameObject:
@@ -449,7 +450,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1019403956}
   - component: {fileID: 1019403959}
-  - component: {fileID: 1019403958}
   - component: {fileID: 1019403957}
   m_Layer: 0
   m_Name: ButtonPlay
@@ -520,21 +520,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06376803, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &1019403958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019403955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScriptObjectButton: {fileID: 0}
-  SpriteButton: {fileID: 0}
-  buttonType: 0
 --- !u!212 &1019403959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -717,6 +702,7 @@ GameObject:
   - component: {fileID: 1169662034}
   - component: {fileID: 1169662037}
   - component: {fileID: 1169662035}
+  - component: {fileID: 1169662038}
   m_Layer: 0
   m_Name: ButtonBack
   m_TagString: Untagged
@@ -836,6 +822,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1169662038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169662033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
+  SpriteButton: {fileID: 1169662033}
+  WindowButton:
+  - {fileID: 1141855314}
+  - {fileID: 1951058644}
+  buttonType: 5
 --- !u!1 &1459546227
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,8 +850,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1459546228}
   - component: {fileID: 1459546231}
-  - component: {fileID: 1459546230}
   - component: {fileID: 1459546229}
+  - component: {fileID: 1459546232}
   m_Layer: 0
   m_Name: ButtonSound
   m_TagString: Untagged
@@ -915,21 +919,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06376803, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &1459546230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459546227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScriptObjectButton: {fileID: 0}
-  SpriteButton: {fileID: 0}
-  buttonType: 0
 --- !u!212 &1459546231
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -982,6 +971,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1459546232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459546227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a397fcf148028044ba7d1b12953735a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
+  SpriteButton: {fileID: 1459546227}
+  WindowButton: []
+  buttonType: 6
 --- !u!1 &1475741242
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
   SpriteButton: {fileID: 1475741242}
+  WindowButton: []
   buttonType: 3
 --- !u!1 &1550976446
 GameObject:
@@ -1449,6 +1455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
   SpriteButton: {fileID: 1691561928}
+  WindowButton:
+  - {fileID: 1141855314}
+  - {fileID: 1951058644}
   buttonType: 1
 --- !u!1 &1842332394
 GameObject:
@@ -1595,6 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScriptObjectButton: {fileID: 11400000, guid: 23568b3de2e75d141b6c28a8ab8dfd92, type: 2}
   SpriteButton: {fileID: 1842332394}
+  WindowButton: []
   buttonType: 2
 --- !u!1 &1951058644
 GameObject:
@@ -1621,7 +1631,7 @@ Transform:
   m_GameObject: {fileID: 1951058644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3709334, y: -1.4239612, z: -0.0053293374}
+  m_LocalPosition: {x: 1.01, y: -1.4239612, z: -0.0053293374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

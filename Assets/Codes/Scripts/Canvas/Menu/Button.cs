@@ -10,7 +10,10 @@ public enum ButtonArrayType
     Setting,
     Leave,
     Help,
-    LeaveDeath
+    LeaveDeath,
+    BackMenu,
+    Loud,
+    Promt
 }
 
 public class Button : MonoBehaviour
@@ -20,11 +23,27 @@ public class Button : MonoBehaviour
     public GameObject SpriteButton;
 
     private Sprite[] currentButton;
+    private Sprite[] currentButtonSetting;
+
+    public GameObject[] WindowButton;
 
     public ButtonArrayType buttonType;
 
+    private bool IsClick;
+
     private void OnMouseUpAsButton()
     {
+        switch(IsClick)
+        {
+            case true:
+                print("T");
+                SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButtonSetting[2];
+                break;
+            case false:
+                print("F");
+                SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButtonSetting[3];
+                break;
+        }
         SwitchButton(false);
         SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButton[2];
     }
@@ -68,6 +87,15 @@ public class Button : MonoBehaviour
                 currentButton = ScriptObjectButton._buttonLeave;
                 LeaveDeathType(IsWork);
                 break;
+            case ButtonArrayType.BackMenu:
+                currentButton = ScriptObjectButton._buttonLeave;
+                BackMenuType(IsWork);
+                break;
+            case ButtonArrayType.Loud:
+                currentButtonSetting = ScriptObjectButton._buttonLoud;
+                currentButton = ScriptObjectButton._buttonLoud;
+                LoudType(IsWork);
+                break;
             default:
                 print("No buttons");
                 break;
@@ -96,7 +124,11 @@ public class Button : MonoBehaviour
         switch (IsWork)
         {
             case true:
-                ////
+                for(int i = 0; i < WindowButton.Length; i++)
+                {
+                    WindowButton[i].SetActive(false);
+                    WindowButton[1].SetActive(true);
+                }
                 break;
         }
     }
@@ -115,6 +147,31 @@ public class Button : MonoBehaviour
         {
             case true:
                 SceneManager.LoadScene(0);
+                break;
+        }
+    }
+    private void BackMenuType(bool IsWork)
+    {
+        switch (IsWork)
+        {
+            case true:
+                for (int i = 0; i < WindowButton.Length; i++)
+                {
+                    WindowButton[i].SetActive(false);
+                    WindowButton[0].SetActive(true);
+                }
+                break;
+        }
+    }
+    private void LoudType(bool IsWork)
+    {
+        switch (IsWork)
+        {
+            case true:
+                IsClick = true;
+                break;
+            case false:
+                IsClick = false;
                 break;
         }
     }

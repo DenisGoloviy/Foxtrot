@@ -28,3 +28,8 @@ MonoBehaviour:
   - {fileID: -1584971606, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: 1161799486, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
   - {fileID: 433464894, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  _ButtonLoud:
+  - {fileID: -388509091, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: -2044204584, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: 325164180, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}
+  - {fileID: -1018592116, guid: 78ef7e87cdd83b144be3b9befff66c22, type: 3}

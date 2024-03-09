@@ -9,6 +9,7 @@ public class ScriptObjectButton : ScriptableObject
     [SerializeField] Sprite[] _ButtonLeave;
     [SerializeField] Sprite[] _ButtonSetting;
     [SerializeField] Sprite[] _ButtonHelp;
+    [SerializeField] Sprite[] _ButtonLoud;
 
     public Sprite[] _buttonPlay
     {
@@ -36,6 +37,13 @@ public class ScriptObjectButton : ScriptableObject
         get
         {
             return _ButtonHelp;
+        }
+    }
+    public Sprite[] _buttonLoud
+    {
+        get
+        {
+            return _ButtonLoud;
         }
     }
 }
