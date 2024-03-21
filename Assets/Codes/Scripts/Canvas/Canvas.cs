@@ -21,12 +21,14 @@ public class Canvas : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Escape) && !IsMenu)
             {
+                Time.timeScale = 0f;
                 Windows[i].SetActive(false);
                 Windows[2].SetActive(true);
                 IsMenu = true;
             }
             else if (Input.GetKeyDown(KeyCode.Escape) && IsMenu)
             {
+                Time.timeScale = 1f;
                 Windows[2].SetActive(false);
                 Windows[0].SetActive(true);
                 IsMenu = false;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using static Unity.Collections.AllocatorManager;
 
@@ -23,30 +24,32 @@ public class Button : MonoBehaviour
     public GameObject SpriteButton;
 
     private Sprite[] currentButton;
-    private Sprite[] currentButtonSetting;
 
     public GameObject[] WindowButton;
 
     public ButtonArrayType buttonType;
 
+    private bool IsLoud;
+
     private bool IsClick;
 
     private void OnMouseUpAsButton()
     {
-        switch(IsClick)
+        if(buttonType == ButtonArrayType.Loud && IsLoud == false)
         {
-            case true:
-                print("T");
-                SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButtonSetting[2];
-                break;
-            case false:
-                print("F");
-                SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButtonSetting[3];
-                break;
+            SoundTrack.Audio(-80);
+            IsLoud = true;
         }
+        else if(buttonType == ButtonArrayType.Loud && IsLoud == true)
+        {
+            SoundTrack.Audio(0);
+            IsLoud = false;
+        }
+
         SwitchButton(false);
         SpriteButton.GetComponent<SpriteRenderer>().sprite = currentButton[2];
     }
+
     private void OnMouseEnter()
     {
         SwitchButton(false);
@@ -92,7 +95,6 @@ public class Button : MonoBehaviour
                 BackMenuType(IsWork);
                 break;
             case ButtonArrayType.Loud:
-                currentButtonSetting = ScriptObjectButton._buttonLoud;
                 currentButton = ScriptObjectButton._buttonLoud;
                 LoudType(IsWork);
                 break;
@@ -103,76 +105,56 @@ public class Button : MonoBehaviour
     }
     private void PlayType(bool IsWork)
     {
-        switch(IsWork)
+        if(IsWork)
         {
-            case true:
-                SceneManager.LoadScene(1);
-                break;
+            SceneManager.LoadScene(1);
         }
     }
     private void HelpType(bool IsWork)
     {
-        switch (IsWork)
+        if(IsWork)
         {
-            case true:
-                ////
-                break;
+            ////
         }
     }
     private void SettingType(bool IsWork)
     {
-        switch (IsWork)
+        if(IsWork)
         {
-            case true:
-                for(int i = 0; i < WindowButton.Length; i++)
-                {
-                    WindowButton[i].SetActive(false);
-                    WindowButton[1].SetActive(true);
-                }
-                break;
+            for (int i = 0; i < WindowButton.Length; i++)
+            {
+                WindowButton[i].SetActive(false);
+                WindowButton[1].SetActive(true);
+            }
         }
     }
     private void LeaveType(bool IsWork)
     {
-        switch (IsWork)
+        if(IsWork)
         {
-            case true:
-                Application.Quit();
-                break;
+            Application.Quit();
         }
     }
     private void LeaveDeathType(bool IsWork)
     {
-        switch (IsWork)
+        if(IsWork)
         {
-            case true:
-                SceneManager.LoadScene(0);
-                break;
+            SceneManager.LoadScene(0);
         }
     }
     private void BackMenuType(bool IsWork)
     {
-        switch (IsWork)
+        if(IsWork)
         {
-            case true:
-                for (int i = 0; i < WindowButton.Length; i++)
-                {
-                    WindowButton[i].SetActive(false);
-                    WindowButton[0].SetActive(true);
-                }
-                break;
+            for (int i = 0; i < WindowButton.Length; i++)
+            {
+                WindowButton[i].SetActive(false);
+            }
+            WindowButton[0].SetActive(true);
         }
     }
-    private void LoudType(bool IsWork)
+    public void LoudType(bool IsWork)
     {
-        switch (IsWork)
-        {
-            case true:
-                IsClick = true;
-                break;
-            case false:
-                IsClick = false;
-                break;
-        }
+        IsClick = IsWork;
     }
 }

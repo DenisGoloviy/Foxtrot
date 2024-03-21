@@ -5,14 +5,12 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 10;
 
     private Animator _Body;
 
     public Interface _Interface;
     void Start()
     {
-        health = maxHealth;
         _Body = GetComponent<Animator>();
     }
 

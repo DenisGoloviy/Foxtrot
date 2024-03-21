@@ -85,9 +85,12 @@ public class Enemy : MonoBehaviour
             {
                 EnemyAnimator.SetTrigger("Destroy");
                 Destroy(gameObject, 1);
-                Boss.CountEnemy++;
+                if (Boss.currentSceneName == "LvlBoss")
+                {
+                    Boss.CountEnemy++;
+                }
             }
-            if (Boss.currentSceneName == "LvlBoss" && Boss.CountEnemy == 2)
+            if (Boss.currentSceneName == "LvlBoss" && Boss.CountEnemy >= 2)
             {
                 SceneManager.LoadScene(6);
             }

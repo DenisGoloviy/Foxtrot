@@ -33,9 +33,9 @@ public class Interface : MonoBehaviour
 
     void _Bars()
     {
-        if(health.health > 10)
+        if(health.health > 11)
         {
-            health.health = 10;
+            health.health = 11;
         }
         else if(health.health < 0) 
         {
@@ -43,7 +43,7 @@ public class Interface : MonoBehaviour
         }
 
         ///////HP:
-        if (health.health == 10) 
+        if (health.health == 11) 
         {
             _HPBAR.sprite = _ScriptObjectInterface._hpbar[0];
         }

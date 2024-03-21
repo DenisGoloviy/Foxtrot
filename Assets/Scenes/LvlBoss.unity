@@ -3452,6 +3452,7 @@ GameObject:
   - component: {fileID: 392260464}
   - component: {fileID: 392260463}
   - component: {fileID: 392260466}
+  - component: {fileID: 392260467}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3527,7 +3528,7 @@ Transform:
   m_GameObject: {fileID: 392260462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.082226, y: -2.580148, z: -10}
+  m_LocalPosition: {x: 11.490048, y: -2.5813496, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3567,6 +3568,102 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!82 &392260467
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392260462}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 2ebad6c71202fc74e9da1bbcf64db75a, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0e0d223237bfacf438c60a04aec23e83, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &516966337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3735,7 +3832,7 @@ MonoBehaviour:
   _camera: {fileID: 1412132650}
   _EventPhases: {fileID: 1204516883}
   _DestroyTurrets: 0
-  bullet: {fileID: 1759927606635822483, guid: 0bf8143f80482ce4d89c48e745b5adc9, type: 3}
+  bullet: {fileID: 1092339787320635913, guid: 11d36658c46426e4e903bfe75c9b0928, type: 3}
   shootingPoint: {fileID: 1387175026}
 --- !u!95 &555798779
 Animator:
@@ -3902,6 +3999,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 229367390658376158, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.516998
+      objectReference: {fileID: 0}
     - target: {fileID: 1150971856759080230, guid: 4af8371bd1828974ba6bf0cf350ccde3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 236.15
@@ -5896,6 +5997,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a61b99db19f272a4fa2c0869171edace, type: 2}
+    - target: {fileID: 3111907330992781001, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
+      propertyPath: health
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3111907330992781001, guid: eaec96907c245f54ea5cb35e2508698d, type: 3}
       propertyPath: _Interface
       value: 
